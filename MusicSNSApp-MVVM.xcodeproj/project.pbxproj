@@ -1,0 +1,481 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		950DAC7328D9909600AC27DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950DAC7228D9909600AC27DA /* AppDelegate.swift */; };
+		950DAC7528D9909600AC27DA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950DAC7428D9909600AC27DA /* SceneDelegate.swift */; };
+		950DAC7728D9909600AC27DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950DAC7628D9909600AC27DA /* ViewController.swift */; };
+		950DAC7A28D9909600AC27DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 950DAC7828D9909600AC27DA /* Main.storyboard */; };
+		950DAC7C28D9909700AC27DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 950DAC7B28D9909700AC27DA /* Assets.xcassets */; };
+		950DAC7F28D9909700AC27DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 950DAC7D28D9909700AC27DA /* LaunchScreen.storyboard */; };
+		950DAC8828D9913D00AC27DA /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 950DAC8728D9913D00AC27DA /* FirebaseAuth */; };
+		950DAC8A28D9913D00AC27DA /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 950DAC8928D9913D00AC27DA /* FirebaseFirestore */; };
+		950DAC8C28D9913D00AC27DA /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 950DAC8B28D9913D00AC27DA /* FirebaseFirestoreSwift */; };
+		950DAC8E28D9913D00AC27DA /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 950DAC8D28D9913D00AC27DA /* FirebaseStorage */; };
+		950DAC9128D9917800AC27DA /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 950DAC9028D9917800AC27DA /* SDWebImage */; };
+		950DAC9428D991AA00AC27DA /* PKHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 950DAC9328D991AA00AC27DA /* PKHUD */; };
+		950DAC9728D992E200AC27DA /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 950DAC9628D992E200AC27DA /* RxCocoa */; };
+		950DAC9928D992E200AC27DA /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 950DAC9828D992E200AC27DA /* RxRelay */; };
+		950DAC9B28D992E200AC27DA /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 950DAC9A28D992E200AC27DA /* RxSwift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		950DAC6F28D9909600AC27DA /* MusicSNSApp-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MusicSNSApp-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		950DAC7228D9909600AC27DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		950DAC7428D9909600AC27DA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		950DAC7628D9909600AC27DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		950DAC7928D9909600AC27DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		950DAC7B28D9909700AC27DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		950DAC7E28D9909700AC27DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		950DAC8028D9909700AC27DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		950DAC6C28D9909600AC27DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				950DAC9B28D992E200AC27DA /* RxSwift in Frameworks */,
+				950DAC8828D9913D00AC27DA /* FirebaseAuth in Frameworks */,
+				950DAC8E28D9913D00AC27DA /* FirebaseStorage in Frameworks */,
+				950DAC8A28D9913D00AC27DA /* FirebaseFirestore in Frameworks */,
+				950DAC9728D992E200AC27DA /* RxCocoa in Frameworks */,
+				950DAC9428D991AA00AC27DA /* PKHUD in Frameworks */,
+				950DAC8C28D9913D00AC27DA /* FirebaseFirestoreSwift in Frameworks */,
+				950DAC9928D992E200AC27DA /* RxRelay in Frameworks */,
+				950DAC9128D9917800AC27DA /* SDWebImage in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		950DAC6628D9909600AC27DA = {
+			isa = PBXGroup;
+			children = (
+				950DAC7128D9909600AC27DA /* MusicSNSApp-MVVM */,
+				950DAC7028D9909600AC27DA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		950DAC7028D9909600AC27DA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				950DAC6F28D9909600AC27DA /* MusicSNSApp-MVVM.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		950DAC7128D9909600AC27DA /* MusicSNSApp-MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				950DAC7228D9909600AC27DA /* AppDelegate.swift */,
+				950DAC7428D9909600AC27DA /* SceneDelegate.swift */,
+				950DAC7628D9909600AC27DA /* ViewController.swift */,
+				950DAC7828D9909600AC27DA /* Main.storyboard */,
+				950DAC7B28D9909700AC27DA /* Assets.xcassets */,
+				950DAC7D28D9909700AC27DA /* LaunchScreen.storyboard */,
+				950DAC8028D9909700AC27DA /* Info.plist */,
+			);
+			path = "MusicSNSApp-MVVM";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		950DAC6E28D9909600AC27DA /* MusicSNSApp-MVVM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 950DAC8328D9909700AC27DA /* Build configuration list for PBXNativeTarget "MusicSNSApp-MVVM" */;
+			buildPhases = (
+				950DAC6B28D9909600AC27DA /* Sources */,
+				950DAC6C28D9909600AC27DA /* Frameworks */,
+				950DAC6D28D9909600AC27DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MusicSNSApp-MVVM";
+			packageProductDependencies = (
+				950DAC8728D9913D00AC27DA /* FirebaseAuth */,
+				950DAC8928D9913D00AC27DA /* FirebaseFirestore */,
+				950DAC8B28D9913D00AC27DA /* FirebaseFirestoreSwift */,
+				950DAC8D28D9913D00AC27DA /* FirebaseStorage */,
+				950DAC9028D9917800AC27DA /* SDWebImage */,
+				950DAC9328D991AA00AC27DA /* PKHUD */,
+				950DAC9628D992E200AC27DA /* RxCocoa */,
+				950DAC9828D992E200AC27DA /* RxRelay */,
+				950DAC9A28D992E200AC27DA /* RxSwift */,
+			);
+			productName = "MusicSNSApp-MVVM";
+			productReference = 950DAC6F28D9909600AC27DA /* MusicSNSApp-MVVM.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		950DAC6728D9909600AC27DA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					950DAC6E28D9909600AC27DA = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 950DAC6A28D9909600AC27DA /* Build configuration list for PBXProject "MusicSNSApp-MVVM" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 950DAC6628D9909600AC27DA;
+			packageReferences = (
+				950DAC8628D9913D00AC27DA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				950DAC8F28D9917800AC27DA /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				950DAC9228D991AA00AC27DA /* XCRemoteSwiftPackageReference "PKHUD" */,
+				950DAC9528D992E200AC27DA /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
+			productRefGroup = 950DAC7028D9909600AC27DA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				950DAC6E28D9909600AC27DA /* MusicSNSApp-MVVM */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		950DAC6D28D9909600AC27DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				950DAC7F28D9909700AC27DA /* LaunchScreen.storyboard in Resources */,
+				950DAC7C28D9909700AC27DA /* Assets.xcassets in Resources */,
+				950DAC7A28D9909600AC27DA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		950DAC6B28D9909600AC27DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				950DAC7728D9909600AC27DA /* ViewController.swift in Sources */,
+				950DAC7328D9909600AC27DA /* AppDelegate.swift in Sources */,
+				950DAC7528D9909600AC27DA /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		950DAC7828D9909600AC27DA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				950DAC7928D9909600AC27DA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		950DAC7D28D9909700AC27DA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				950DAC7E28D9909700AC27DA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		950DAC8128D9909700AC27DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		950DAC8228D9909700AC27DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		950DAC8428D9909700AC27DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7X9S244452;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MusicSNSApp-MVVM/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mkondo.MusicSNSApp-MVVM";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		950DAC8528D9909700AC27DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7X9S244452;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MusicSNSApp-MVVM/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mkondo.MusicSNSApp-MVVM";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		950DAC6A28D9909600AC27DA /* Build configuration list for PBXProject "MusicSNSApp-MVVM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				950DAC8128D9909700AC27DA /* Debug */,
+				950DAC8228D9909700AC27DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		950DAC8328D9909700AC27DA /* Build configuration list for PBXNativeTarget "MusicSNSApp-MVVM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				950DAC8428D9909700AC27DA /* Debug */,
+				950DAC8528D9909700AC27DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		950DAC8628D9913D00AC27DA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		950DAC8F28D9917800AC27DA /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		950DAC9228D991AA00AC27DA /* XCRemoteSwiftPackageReference "PKHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pkluz/PKHUD";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		950DAC9528D992E200AC27DA /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		950DAC8728D9913D00AC27DA /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 950DAC8628D9913D00AC27DA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		950DAC8928D9913D00AC27DA /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 950DAC8628D9913D00AC27DA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		950DAC8B28D9913D00AC27DA /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 950DAC8628D9913D00AC27DA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		950DAC8D28D9913D00AC27DA /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 950DAC8628D9913D00AC27DA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		950DAC9028D9917800AC27DA /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 950DAC8F28D9917800AC27DA /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		950DAC9328D991AA00AC27DA /* PKHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 950DAC9228D991AA00AC27DA /* XCRemoteSwiftPackageReference "PKHUD" */;
+			productName = PKHUD;
+		};
+		950DAC9628D992E200AC27DA /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 950DAC9528D992E200AC27DA /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		950DAC9828D992E200AC27DA /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 950DAC9528D992E200AC27DA /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		950DAC9A28D992E200AC27DA /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 950DAC9528D992E200AC27DA /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 950DAC6728D9909600AC27DA /* Project object */;
+}
