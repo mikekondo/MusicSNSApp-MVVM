@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		950DAC7328D9909600AC27DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950DAC7228D9909600AC27DA /* AppDelegate.swift */; };
 		950DAC7528D9909600AC27DA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950DAC7428D9909600AC27DA /* SceneDelegate.swift */; };
-		950DAC7728D9909600AC27DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950DAC7628D9909600AC27DA /* ViewController.swift */; };
-		950DAC7A28D9909600AC27DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 950DAC7828D9909600AC27DA /* Main.storyboard */; };
 		950DAC7C28D9909700AC27DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 950DAC7B28D9909700AC27DA /* Assets.xcassets */; };
 		950DAC7F28D9909700AC27DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 950DAC7D28D9909700AC27DA /* LaunchScreen.storyboard */; };
 		950DAC8828D9913D00AC27DA /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 950DAC8728D9913D00AC27DA /* FirebaseAuth */; };
@@ -22,17 +20,33 @@
 		950DAC9728D992E200AC27DA /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 950DAC9628D992E200AC27DA /* RxCocoa */; };
 		950DAC9928D992E200AC27DA /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 950DAC9828D992E200AC27DA /* RxRelay */; };
 		950DAC9B28D992E200AC27DA /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 950DAC9A28D992E200AC27DA /* RxSwift */; };
+		950DAC9D28D993B000AC27DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 950DAC9C28D993B000AC27DA /* GoogleService-Info.plist */; };
+		950DACA028D997A500AC27DA /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950DAC9E28D997A500AC27DA /* MainTabBarViewController.swift */; };
+		950DACA128D997A500AC27DA /* MainTabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 950DAC9F28D997A500AC27DA /* MainTabBarViewController.xib */; };
+		950DACA828D9995A00AC27DA /* SearchMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950DACA628D9995A00AC27DA /* SearchMusicViewController.swift */; };
+		950DACA928D9995A00AC27DA /* SearchMusicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 950DACA728D9995A00AC27DA /* SearchMusicViewController.xib */; };
+		950DACAE28D9999B00AC27DA /* PostListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950DACAC28D9999B00AC27DA /* PostListViewController.swift */; };
+		950DACAF28D9999B00AC27DA /* PostListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 950DACAD28D9999B00AC27DA /* PostListViewController.xib */; };
+		950DACB228D999EC00AC27DA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950DACB028D999EC00AC27DA /* ProfileViewController.swift */; };
+		950DACB328D999EC00AC27DA /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 950DACB128D999EC00AC27DA /* ProfileViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		950DAC6F28D9909600AC27DA /* MusicSNSApp-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MusicSNSApp-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		950DAC7228D9909600AC27DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		950DAC7428D9909600AC27DA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		950DAC7628D9909600AC27DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		950DAC7928D9909600AC27DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		950DAC7B28D9909700AC27DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		950DAC7E28D9909700AC27DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		950DAC8028D9909700AC27DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		950DAC9C28D993B000AC27DA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		950DAC9E28D997A500AC27DA /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		950DAC9F28D997A500AC27DA /* MainTabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTabBarViewController.xib; sourceTree = "<group>"; };
+		950DACA628D9995A00AC27DA /* SearchMusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMusicViewController.swift; sourceTree = "<group>"; };
+		950DACA728D9995A00AC27DA /* SearchMusicViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchMusicViewController.xib; sourceTree = "<group>"; };
+		950DACAC28D9999B00AC27DA /* PostListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewController.swift; sourceTree = "<group>"; };
+		950DACAD28D9999B00AC27DA /* PostListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostListViewController.xib; sourceTree = "<group>"; };
+		950DACB028D999EC00AC27DA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		950DACB128D999EC00AC27DA /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,15 +88,78 @@
 		950DAC7128D9909600AC27DA /* MusicSNSApp-MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				950DACA428D998EB00AC27DA /* Model */,
+				950DACA328D998E600AC27DA /* Views */,
+				950DACA228D998DD00AC27DA /* ViewModels */,
 				950DAC7228D9909600AC27DA /* AppDelegate.swift */,
 				950DAC7428D9909600AC27DA /* SceneDelegate.swift */,
-				950DAC7628D9909600AC27DA /* ViewController.swift */,
-				950DAC7828D9909600AC27DA /* Main.storyboard */,
 				950DAC7B28D9909700AC27DA /* Assets.xcassets */,
 				950DAC7D28D9909700AC27DA /* LaunchScreen.storyboard */,
+				950DAC9C28D993B000AC27DA /* GoogleService-Info.plist */,
 				950DAC8028D9909700AC27DA /* Info.plist */,
 			);
 			path = "MusicSNSApp-MVVM";
+			sourceTree = "<group>";
+		};
+		950DACA228D998DD00AC27DA /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		950DACA328D998E600AC27DA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				950DACB428D999F200AC27DA /* Profile */,
+				950DACAB28D9997E00AC27DA /* PostList */,
+				950DACAA28D9995F00AC27DA /* SearchMusic */,
+				950DACA528D998F700AC27DA /* MainTabBar */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		950DACA428D998EB00AC27DA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		950DACA528D998F700AC27DA /* MainTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				950DAC9F28D997A500AC27DA /* MainTabBarViewController.xib */,
+				950DAC9E28D997A500AC27DA /* MainTabBarViewController.swift */,
+			);
+			path = MainTabBar;
+			sourceTree = "<group>";
+		};
+		950DACAA28D9995F00AC27DA /* SearchMusic */ = {
+			isa = PBXGroup;
+			children = (
+				950DACA728D9995A00AC27DA /* SearchMusicViewController.xib */,
+				950DACA628D9995A00AC27DA /* SearchMusicViewController.swift */,
+			);
+			path = SearchMusic;
+			sourceTree = "<group>";
+		};
+		950DACAB28D9997E00AC27DA /* PostList */ = {
+			isa = PBXGroup;
+			children = (
+				950DACAC28D9999B00AC27DA /* PostListViewController.swift */,
+				950DACAD28D9999B00AC27DA /* PostListViewController.xib */,
+			);
+			path = PostList;
+			sourceTree = "<group>";
+		};
+		950DACB428D999F200AC27DA /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				950DACB128D999EC00AC27DA /* ProfileViewController.xib */,
+				950DACB028D999EC00AC27DA /* ProfileViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,9 +237,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				950DACB328D999EC00AC27DA /* ProfileViewController.xib in Resources */,
+				950DACAF28D9999B00AC27DA /* PostListViewController.xib in Resources */,
 				950DAC7F28D9909700AC27DA /* LaunchScreen.storyboard in Resources */,
+				950DAC9D28D993B000AC27DA /* GoogleService-Info.plist in Resources */,
+				950DACA128D997A500AC27DA /* MainTabBarViewController.xib in Resources */,
 				950DAC7C28D9909700AC27DA /* Assets.xcassets in Resources */,
-				950DAC7A28D9909600AC27DA /* Main.storyboard in Resources */,
+				950DACA928D9995A00AC27DA /* SearchMusicViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,7 +254,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				950DAC7728D9909600AC27DA /* ViewController.swift in Sources */,
+				950DACB228D999EC00AC27DA /* ProfileViewController.swift in Sources */,
+				950DACA828D9995A00AC27DA /* SearchMusicViewController.swift in Sources */,
+				950DACAE28D9999B00AC27DA /* PostListViewController.swift in Sources */,
+				950DACA028D997A500AC27DA /* MainTabBarViewController.swift in Sources */,
 				950DAC7328D9909600AC27DA /* AppDelegate.swift in Sources */,
 				950DAC7528D9909600AC27DA /* SceneDelegate.swift in Sources */,
 			);
@@ -182,14 +266,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		950DAC7828D9909600AC27DA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				950DAC7928D9909600AC27DA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		950DAC7D28D9909700AC27DA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -327,7 +403,6 @@
 				INFOPLIST_FILE = "MusicSNSApp-MVVM/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -355,7 +430,6 @@
 				INFOPLIST_FILE = "MusicSNSApp-MVVM/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
