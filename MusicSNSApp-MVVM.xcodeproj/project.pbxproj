@@ -25,10 +25,16 @@
 		950DACA128D997A500AC27DA /* MainTabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 950DAC9F28D997A500AC27DA /* MainTabBarViewController.xib */; };
 		950DACA828D9995A00AC27DA /* SearchMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950DACA628D9995A00AC27DA /* SearchMusicViewController.swift */; };
 		950DACA928D9995A00AC27DA /* SearchMusicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 950DACA728D9995A00AC27DA /* SearchMusicViewController.xib */; };
-		950DACAE28D9999B00AC27DA /* PostListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950DACAC28D9999B00AC27DA /* PostListViewController.swift */; };
-		950DACAF28D9999B00AC27DA /* PostListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 950DACAD28D9999B00AC27DA /* PostListViewController.xib */; };
+		950DACAE28D9999B00AC27DA /* PostsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950DACAC28D9999B00AC27DA /* PostsListViewController.swift */; };
+		950DACAF28D9999B00AC27DA /* PostsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 950DACAD28D9999B00AC27DA /* PostsListViewController.xib */; };
 		950DACB228D999EC00AC27DA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950DACB028D999EC00AC27DA /* ProfileViewController.swift */; };
 		950DACB328D999EC00AC27DA /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 950DACB128D999EC00AC27DA /* ProfileViewController.xib */; };
+		9534AA5628DEED6D0065FDD5 /* MusicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9534AA5428DEED6D0065FDD5 /* MusicTableViewCell.swift */; };
+		9534AA5728DEED6D0065FDD5 /* MusicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9534AA5528DEED6D0065FDD5 /* MusicTableViewCell.xib */; };
+		9534AA5C28DEED9D0065FDD5 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9534AA5A28DEED9D0065FDD5 /* PostTableViewCell.swift */; };
+		9534AA5D28DEED9D0065FDD5 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9534AA5B28DEED9D0065FDD5 /* PostTableViewCell.xib */; };
+		9534AA6128DEF3070065FDD5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9534AA5F28DEF3070065FDD5 /* LoginViewController.swift */; };
+		9534AA6228DEF3070065FDD5 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9534AA6028DEF3070065FDD5 /* LoginViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,10 +49,16 @@
 		950DAC9F28D997A500AC27DA /* MainTabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTabBarViewController.xib; sourceTree = "<group>"; };
 		950DACA628D9995A00AC27DA /* SearchMusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMusicViewController.swift; sourceTree = "<group>"; };
 		950DACA728D9995A00AC27DA /* SearchMusicViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchMusicViewController.xib; sourceTree = "<group>"; };
-		950DACAC28D9999B00AC27DA /* PostListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewController.swift; sourceTree = "<group>"; };
-		950DACAD28D9999B00AC27DA /* PostListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostListViewController.xib; sourceTree = "<group>"; };
+		950DACAC28D9999B00AC27DA /* PostsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsListViewController.swift; sourceTree = "<group>"; };
+		950DACAD28D9999B00AC27DA /* PostsListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostsListViewController.xib; sourceTree = "<group>"; };
 		950DACB028D999EC00AC27DA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		950DACB128D999EC00AC27DA /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		9534AA5428DEED6D0065FDD5 /* MusicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTableViewCell.swift; sourceTree = "<group>"; };
+		9534AA5528DEED6D0065FDD5 /* MusicTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicTableViewCell.xib; sourceTree = "<group>"; };
+		9534AA5A28DEED9D0065FDD5 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		9534AA5B28DEED9D0065FDD5 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
+		9534AA5F28DEF3070065FDD5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9534AA6028DEF3070065FDD5 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,8 +123,9 @@
 		950DACA328D998E600AC27DA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9534AA5E28DEF2DF0065FDD5 /* Login */,
 				950DACB428D999F200AC27DA /* Profile */,
-				950DACAB28D9997E00AC27DA /* PostList */,
+				950DACAB28D9997E00AC27DA /* PostsList */,
 				950DACAA28D9995F00AC27DA /* SearchMusic */,
 				950DACA528D998F700AC27DA /* MainTabBar */,
 			);
@@ -140,17 +153,19 @@
 			children = (
 				950DACA728D9995A00AC27DA /* SearchMusicViewController.xib */,
 				950DACA628D9995A00AC27DA /* SearchMusicViewController.swift */,
+				9534AA5828DEED740065FDD5 /* Cell */,
 			);
 			path = SearchMusic;
 			sourceTree = "<group>";
 		};
-		950DACAB28D9997E00AC27DA /* PostList */ = {
+		950DACAB28D9997E00AC27DA /* PostsList */ = {
 			isa = PBXGroup;
 			children = (
-				950DACAC28D9999B00AC27DA /* PostListViewController.swift */,
-				950DACAD28D9999B00AC27DA /* PostListViewController.xib */,
+				950DACAC28D9999B00AC27DA /* PostsListViewController.swift */,
+				950DACAD28D9999B00AC27DA /* PostsListViewController.xib */,
+				9534AA5928DEED8A0065FDD5 /* Cell */,
 			);
-			path = PostList;
+			path = PostsList;
 			sourceTree = "<group>";
 		};
 		950DACB428D999F200AC27DA /* Profile */ = {
@@ -160,6 +175,33 @@
 				950DACB028D999EC00AC27DA /* ProfileViewController.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		9534AA5828DEED740065FDD5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9534AA5428DEED6D0065FDD5 /* MusicTableViewCell.swift */,
+				9534AA5528DEED6D0065FDD5 /* MusicTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		9534AA5928DEED8A0065FDD5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9534AA5A28DEED9D0065FDD5 /* PostTableViewCell.swift */,
+				9534AA5B28DEED9D0065FDD5 /* PostTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		9534AA5E28DEF2DF0065FDD5 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				9534AA5F28DEF3070065FDD5 /* LoginViewController.swift */,
+				9534AA6028DEF3070065FDD5 /* LoginViewController.xib */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,9 +279,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9534AA6228DEF3070065FDD5 /* LoginViewController.xib in Resources */,
 				950DACB328D999EC00AC27DA /* ProfileViewController.xib in Resources */,
-				950DACAF28D9999B00AC27DA /* PostListViewController.xib in Resources */,
+				950DACAF28D9999B00AC27DA /* PostsListViewController.xib in Resources */,
 				950DAC7F28D9909700AC27DA /* LaunchScreen.storyboard in Resources */,
+				9534AA5D28DEED9D0065FDD5 /* PostTableViewCell.xib in Resources */,
+				9534AA5728DEED6D0065FDD5 /* MusicTableViewCell.xib in Resources */,
 				950DAC9D28D993B000AC27DA /* GoogleService-Info.plist in Resources */,
 				950DACA128D997A500AC27DA /* MainTabBarViewController.xib in Resources */,
 				950DAC7C28D9909700AC27DA /* Assets.xcassets in Resources */,
@@ -254,10 +299,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9534AA6128DEF3070065FDD5 /* LoginViewController.swift in Sources */,
 				950DACB228D999EC00AC27DA /* ProfileViewController.swift in Sources */,
 				950DACA828D9995A00AC27DA /* SearchMusicViewController.swift in Sources */,
-				950DACAE28D9999B00AC27DA /* PostListViewController.swift in Sources */,
+				950DACAE28D9999B00AC27DA /* PostsListViewController.swift in Sources */,
+				9534AA5C28DEED9D0065FDD5 /* PostTableViewCell.swift in Sources */,
 				950DACA028D997A500AC27DA /* MainTabBarViewController.swift in Sources */,
+				9534AA5628DEED6D0065FDD5 /* MusicTableViewCell.swift in Sources */,
 				950DAC7328D9909600AC27DA /* AppDelegate.swift in Sources */,
 				950DAC7528D9909600AC27DA /* SceneDelegate.swift in Sources */,
 			);

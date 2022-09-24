@@ -19,7 +19,7 @@ class MainTabBarViewController: UITabBarController {
         profileVC.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 0)
         let profileNVC = UINavigationController(rootViewController: profileVC)
 
-        let postListVC = PostListViewController()
+        let postListVC = PostsListViewController()
         postListVC.tabBarItem = UITabBarItem(tabBarSystemItem: .recents, tag: 1)
         let postListNVC = UINavigationController(rootViewController: postListVC)
 
