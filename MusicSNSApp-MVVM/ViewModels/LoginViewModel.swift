@@ -54,35 +54,24 @@ class LoginViewModel: LoginViewModelInputs, LoginViewModelOutputs{
     }
 
     func setupBindings() {
-        // HACK: ユーザ名の有効、無効判断
-        userNameTextFieldObservable.subscribe { text in
-            guard let userName = text.element else { return }
-            if userName.count > 5 {
-                self.userNameValid = true
-            }
-            print("userNameValid:",self.userNameValid)
-        }
-        .disposed(by: disposeBag)
 
-        // HACK: メールアドレスの有効、無効判断
-        emailTextFieldObservable.subscribe { text in
-            guard let email = text.element else { return }
-            if email.count > 5 && email.contains("@gmail.com") {
-                self.emailValid = true
-            }
-            print("emailValid:",self.emailValid)
+        let userNameValid = userNameTextFieldObservable.asObservable().map { text -> Bool in
+            return text.count >= 5
         }
-        .disposed(by: disposeBag)
 
-        // HACK: パスワードの有効、無効判断
-        passwordTextFieldObservable.subscribe { text in
-            guard let password = text.element else { return }
-            if password.count > 5 {
-                self.passwordValid = true
-            }
-            print("password",self.passwordValid)
+        let emailValid = emailTextFieldObservable.asObservable().map { text -> Bool in
+            return text.count >= 5 && text.contains("@gmail.com")
         }
-        .disposed(by: disposeBag)
+        
+        let passwordValid = passwordTextFieldObservable.asObservable().map { text -> Bool in
+            return text.count >= 5
+        }
+
+        // $0 && $1 && $2のBool値がvalidAllに入る
+        Observable.combineLatest(userNameValid, emailValid, passwordValid) { $0 && $1 && $2}.subscribe { validAll in
+            self.isValidRegister.onNext(validAll)
+        }.disposed(by: disposeBag)
+
 
         // ボタンタップ、アカウント作成
         registerButtonTapObservable.subscribe(onNext: {

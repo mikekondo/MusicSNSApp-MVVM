@@ -28,12 +28,19 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        registerButton.isEnabled = false
+
         setupProfileImage()
 
         // MARK: Binding
         loginViewModel.setupBindings()
 
+        // ボタンの有効化、無効化
+        loginViewModel.isValidRegister.subscribe(onNext: { validAll in
+            self.registerButton.isEnabled = validAll
+        })
+        .disposed(by: disposeBag)
         // MainTabBarViewControllerに画面遷移
         loginViewModel.isSuccessCreateUser.subscribe(onNext: { [weak self] success in
             let mainTabBar = MainTabBarViewController()
@@ -43,6 +50,7 @@ class LoginViewController: UIViewController {
             print("アカウント作成に失敗しました",error)
         })
         .disposed(by: disposeBag)
+
     }
 
     private func setupProfileImage() {
@@ -60,7 +68,7 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController: UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        // サイズの変えた時と変えてない時
+       
         if let editImage = info[.editedImage] as? UIImage{
             profileImageButton.setImage(editImage.withRenderingMode(.alwaysOriginal), for: .normal)
         } else if let originalImage = info[.originalImage] as? UIImage {
