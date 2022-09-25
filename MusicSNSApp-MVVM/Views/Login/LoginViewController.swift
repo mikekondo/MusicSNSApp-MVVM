@@ -12,6 +12,7 @@ import RxCocoa
 class LoginViewController: UIViewController {
 
     // MARK: - UI Parts
+    @IBOutlet private weak var profileImageButton: UIButton!
     @IBOutlet private weak var userNameTextField: UITextField!
     @IBOutlet private weak var emailTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
@@ -27,6 +28,8 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupProfileImage()
 
         // MARK: Binding
         loginViewModel.setupBindings()
@@ -42,4 +45,34 @@ class LoginViewController: UIViewController {
         .disposed(by: disposeBag)
     }
 
+    private func setupProfileImage() {
+        profileImageButton.layer.cornerRadius = profileImageButton.frame.size.height/2
+        profileImageButton.layer.borderWidth = 1
+    }
+
+    @IBAction func didTapProfileImageButton(_ sender: Any) {
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        imagePickerController.allowsEditing = true
+        self.present(imagePickerController, animated: true, completion: nil)
+    }
+}
+
+extension LoginViewController: UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        // サイズの変えた時と変えてない時
+        if let editImage = info[.editedImage] as? UIImage{
+            profileImageButton.setImage(editImage.withRenderingMode(.alwaysOriginal), for: .normal)
+        } else if let originalImage = info[.originalImage] as? UIImage {
+            profileImageButton.setImage(originalImage.withRenderingMode(.alwaysOriginal), for: .normal)
+        }
+
+        profileImageButton.setTitle("", for: .normal)
+        profileImageButton.imageView?.contentMode = .scaleAspectFill
+        profileImageButton.contentHorizontalAlignment = .fill
+        profileImageButton.contentVerticalAlignment = .fill
+        profileImageButton.clipsToBounds = true
+
+        dismiss(animated: true,completion: nil)
+    }
 }
