@@ -12,7 +12,7 @@ protocol LoginViewModelInputs {
     var userNameTextFieldObservable: Observable<String> { get }
     var emailTextFieldObservable: Observable<String> { get }
     var passwordTextFieldObservable: Observable<String> { get }
-    var registerButtonObservable: Observable<Void> { get }
+    var registerButtonTapObservable: Observable<Void> { get }
 }
 
 protocol LoginViewModelOutputs {
@@ -29,7 +29,7 @@ class LoginViewModel: LoginViewModelInputs, LoginViewModelOutputs{
     var userNameTextFieldObservable: Observable<String>
     var emailTextFieldObservable: Observable<String>
     var passwordTextFieldObservable: Observable<String>
-    var registerButtonObservable: Observable<Void>
+    var registerButtonTapObservable: Observable<Void>
 
     // MARK: - Outputs
     var isSuccessCreateUser = PublishSubject<Bool>()
@@ -46,11 +46,11 @@ class LoginViewModel: LoginViewModelInputs, LoginViewModelOutputs{
     init(userNameTextFieldObservable: Observable<String>,
          emailTextFieldObservable: Observable<String>,
          passwordTextFieldObservable: Observable<String>,
-         registerButtonObservable: Observable<Void>) {
+         registerButtonTapObservable: Observable<Void>) {
         self.userNameTextFieldObservable = userNameTextFieldObservable
         self.emailTextFieldObservable = emailTextFieldObservable
         self.passwordTextFieldObservable = passwordTextFieldObservable
-        self.registerButtonObservable = registerButtonObservable
+        self.registerButtonTapObservable = registerButtonTapObservable
     }
 
     func setupBindings() {
@@ -83,5 +83,12 @@ class LoginViewModel: LoginViewModelInputs, LoginViewModelOutputs{
             print("password",self.passwordValid)
         }
         .disposed(by: disposeBag)
+
+        // ボタンタップ、アカウント作成
+        registerButtonTapObservable.subscribe(onNext: {
+            self.isSuccessCreateUser.onNext(true)
+        })
+        .disposed(by: disposeBag)
+
     }
 }
