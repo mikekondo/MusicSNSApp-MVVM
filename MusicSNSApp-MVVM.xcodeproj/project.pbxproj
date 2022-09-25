@@ -35,6 +35,8 @@
 		9534AA5D28DEED9D0065FDD5 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9534AA5B28DEED9D0065FDD5 /* PostTableViewCell.xib */; };
 		9534AA6128DEF3070065FDD5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9534AA5F28DEF3070065FDD5 /* LoginViewController.swift */; };
 		9534AA6228DEF3070065FDD5 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9534AA6028DEF3070065FDD5 /* LoginViewController.xib */; };
+		9534AA6428DFEFE60065FDD5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9534AA6328DFEFE60065FDD5 /* User.swift */; };
+		9534AA6728DFF01E0065FDD5 /* Firebase-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9534AA6628DFF01E0065FDD5 /* Firebase-Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +61,8 @@
 		9534AA5B28DEED9D0065FDD5 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
 		9534AA5F28DEF3070065FDD5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9534AA6028DEF3070065FDD5 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		9534AA6328DFEFE60065FDD5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9534AA6628DFF01E0065FDD5 /* Firebase-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase-Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,7 @@
 		950DAC6628D9909600AC27DA = {
 			isa = PBXGroup;
 			children = (
+				9534AA6528DFF0100065FDD5 /* Extension */,
 				950DAC7128D9909600AC27DA /* MusicSNSApp-MVVM */,
 				950DAC7028D9909600AC27DA /* Products */,
 			);
@@ -135,6 +140,7 @@
 		950DACA428D998EB00AC27DA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9534AA6328DFEFE60065FDD5 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -202,6 +208,14 @@
 				9534AA6028DEF3070065FDD5 /* LoginViewController.xib */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		9534AA6528DFF0100065FDD5 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9534AA6628DFF01E0065FDD5 /* Firebase-Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,6 +321,8 @@
 				950DACA028D997A500AC27DA /* MainTabBarViewController.swift in Sources */,
 				9534AA5628DEED6D0065FDD5 /* MusicTableViewCell.swift in Sources */,
 				950DAC7328D9909600AC27DA /* AppDelegate.swift in Sources */,
+				9534AA6428DFEFE60065FDD5 /* User.swift in Sources */,
+				9534AA6728DFF01E0065FDD5 /* Firebase-Extension.swift in Sources */,
 				950DAC7528D9909600AC27DA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
