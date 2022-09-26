@@ -35,6 +35,9 @@
 		9534AA5D28DEED9D0065FDD5 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9534AA5B28DEED9D0065FDD5 /* PostTableViewCell.xib */; };
 		9534AA6128DEF3070065FDD5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9534AA5F28DEF3070065FDD5 /* LoginViewController.swift */; };
 		9534AA6228DEF3070065FDD5 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9534AA6028DEF3070065FDD5 /* LoginViewController.xib */; };
+		9534AA6428DFEFE60065FDD5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9534AA6328DFEFE60065FDD5 /* User.swift */; };
+		9534AA6928DFF3140065FDD5 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9534AA6828DFF3140065FDD5 /* LoginViewModel.swift */; };
+		9598109028E027560073A7AF /* RegisterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9598108F28E027560073A7AF /* RegisterUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +62,9 @@
 		9534AA5B28DEED9D0065FDD5 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
 		9534AA5F28DEF3070065FDD5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9534AA6028DEF3070065FDD5 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		9534AA6328DFEFE60065FDD5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9534AA6828DFF3140065FDD5 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		9598108F28E027560073A7AF /* RegisterUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +122,7 @@
 		950DACA228D998DD00AC27DA /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				9534AA6828DFF3140065FDD5 /* LoginViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -135,6 +142,8 @@
 		950DACA428D998EB00AC27DA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9534AA6328DFEFE60065FDD5 /* User.swift */,
+				9598108F28E027560073A7AF /* RegisterUser.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -300,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9534AA6128DEF3070065FDD5 /* LoginViewController.swift in Sources */,
+				9598109028E027560073A7AF /* RegisterUser.swift in Sources */,
 				950DACB228D999EC00AC27DA /* ProfileViewController.swift in Sources */,
 				950DACA828D9995A00AC27DA /* SearchMusicViewController.swift in Sources */,
 				950DACAE28D9999B00AC27DA /* PostsListViewController.swift in Sources */,
@@ -307,6 +317,8 @@
 				950DACA028D997A500AC27DA /* MainTabBarViewController.swift in Sources */,
 				9534AA5628DEED6D0065FDD5 /* MusicTableViewCell.swift in Sources */,
 				950DAC7328D9909600AC27DA /* AppDelegate.swift in Sources */,
+				9534AA6928DFF3140065FDD5 /* LoginViewModel.swift in Sources */,
+				9534AA6428DFEFE60065FDD5 /* User.swift in Sources */,
 				950DAC7528D9909600AC27DA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
