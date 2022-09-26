@@ -17,12 +17,13 @@ class LoginViewController: UIViewController {
     @IBOutlet private weak var emailTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
     @IBOutlet private weak var registerButton: UIButton!
+    @IBOutlet weak var imageView: UIImageView!
 
     // MARK: - ViewModel Connect
     private lazy var loginViewModel = LoginViewModel(userNameTextFieldObservable: userNameTextField.rx.text.map { $0 ?? ""},
                                                      emailTextFieldObservable: emailTextField.rx.text.map { $0 ?? ""},
                                                      passwordTextFieldObservable: passwordTextField.rx.text.map { $0 ?? ""},
-                                                     registerButtonTapObservable: registerButton.rx.tap.asObservable())
+                                                     registerButtonTapObservable: registerButton.rx.tap.asObservable(), profileImageTapButtonObservable: profileImageButton.rx.tap.asObservable())
 
     private let disposeBag = DisposeBag()
 
@@ -41,16 +42,19 @@ class LoginViewController: UIViewController {
             self.registerButton.isEnabled = validAll
         })
         .disposed(by: disposeBag)
+
         // MainTabBarViewControllerに画面遷移
         loginViewModel.isSuccessCreateUser.subscribe(onNext: { [weak self] success in
-            let mainTabBar = MainTabBarViewController()
-            mainTabBar.modalPresentationStyle = .fullScreen
-            self?.present(mainTabBar, animated: true,completion: nil)
-        }, onError: { [weak self] error in
+            // メインスレッドで実行
+            DispatchQueue.main.async {
+                let mainTabBar = MainTabBarViewController()
+                mainTabBar.modalPresentationStyle = .fullScreen
+                self?.present(mainTabBar, animated: true,completion: nil)
+            }
+        }, onError: { error in
             print("アカウント作成に失敗しました",error)
         })
         .disposed(by: disposeBag)
-
     }
 
     private func setupProfileImage() {
@@ -58,6 +62,9 @@ class LoginViewController: UIViewController {
         profileImageButton.layer.borderWidth = 1
     }
 
+
+
+    // 写真ライブラリに遷移
     @IBAction func didTapProfileImageButton(_ sender: Any) {
         let imagePickerController = UIImagePickerController()
         imagePickerController.delegate = self

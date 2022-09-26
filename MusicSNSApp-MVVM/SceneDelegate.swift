@@ -20,14 +20,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
 
-        if let uid = Auth.auth().currentUser?.uid {
-            print("ログイン済みです",uid)
-            window?.rootViewController = MainTabBarViewController()
-            window?.makeKeyAndVisible()
-        }else {
-            window?.rootViewController = LoginViewController()
-            window?.makeKeyAndVisible()
-        }
+        // 本番
+//        if let uid = Auth.auth().currentUser?.uid {
+//            print("ログイン済みです",uid)
+//            window?.rootViewController = MainTabBarViewController()
+//            window?.makeKeyAndVisible()
+//        }else {
+//            window?.rootViewController = LoginViewController()
+//            window?.makeKeyAndVisible()
+//        }
+
+        window?.rootViewController = LoginViewController()
+        window?.makeKeyAndVisible()
+
+
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

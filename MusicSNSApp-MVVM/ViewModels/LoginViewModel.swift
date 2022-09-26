@@ -7,16 +7,18 @@
 
 import RxSwift
 import RxRelay
+import SwiftUI
 
 protocol LoginViewModelInputs {
     var userNameTextFieldObservable: Observable<String> { get }
     var emailTextFieldObservable: Observable<String> { get }
     var passwordTextFieldObservable: Observable<String> { get }
     var registerButtonTapObservable: Observable<Void> { get }
+    var profileImageTapButtonObservable: Observable<Void> { get }
 }
 
 protocol LoginViewModelOutputs {
-    // アカウント可能のフラグ（userName, email. passwordの文字数指定）
+    // アカウント登録可能のフラグ（userName, email. passwordの文字数指定）
     var isValidRegister: PublishSubject<Bool> { get }
     // アカウント登録成功のフラグ？（成功したら画面遷移）
     var isSuccessCreateUser: PublishSubject<Bool> { get }
@@ -30,10 +32,14 @@ class LoginViewModel: LoginViewModelInputs, LoginViewModelOutputs{
     var emailTextFieldObservable: Observable<String>
     var passwordTextFieldObservable: Observable<String>
     var registerButtonTapObservable: Observable<Void>
+    var profileImageTapButtonObservable: Observable<Void>
 
     // MARK: - Outputs
     var isSuccessCreateUser = PublishSubject<Bool>()
     var isValidRegister = PublishSubject<Bool>()
+
+    // MARK: - Model Connect
+    let registerUser = RegisterUser()
 
     private let disposeBag = DisposeBag()
 
@@ -42,21 +48,28 @@ class LoginViewModel: LoginViewModelInputs, LoginViewModelOutputs{
     private var emailValid = false
     private var passwordValid = false
 
+    // MARK: 必須入力
+    private var userName = ""
+    private var email = ""
+    private var password = ""
+
 
     init(userNameTextFieldObservable: Observable<String>,
          emailTextFieldObservable: Observable<String>,
          passwordTextFieldObservable: Observable<String>,
-         registerButtonTapObservable: Observable<Void>) {
+         registerButtonTapObservable: Observable<Void>,
+         profileImageTapButtonObservable: Observable<Void>) {
         self.userNameTextFieldObservable = userNameTextFieldObservable
         self.emailTextFieldObservable = emailTextFieldObservable
         self.passwordTextFieldObservable = passwordTextFieldObservable
         self.registerButtonTapObservable = registerButtonTapObservable
+        self.profileImageTapButtonObservable = profileImageTapButtonObservable
     }
 
     func setupBindings() {
 
         let userNameValid = userNameTextFieldObservable.asObservable().map { text -> Bool in
-            return text.count >= 5
+            return text.count >= 2
         }
 
         let emailValid = emailTextFieldObservable.asObservable().map { text -> Bool in
@@ -72,10 +85,27 @@ class LoginViewModel: LoginViewModelInputs, LoginViewModelOutputs{
             self.isValidRegister.onNext(validAll)
         }.disposed(by: disposeBag)
 
+        // 入力のバインド
+        Observable.combineLatest(userNameTextFieldObservable, emailTextFieldObservable, passwordTextFieldObservable).subscribe { userName,email,password in
+            self.userName = userName
+            self.email = email
+            self.password = password
+        }
+        .disposed(by: disposeBag)
 
         // ボタンタップ、アカウント作成
         registerButtonTapObservable.subscribe(onNext: {
-            self.isSuccessCreateUser.onNext(true)
+            Task{
+                do{
+                    try await self.registerUser.registerUserToFirestore(userName: self.userName, email: self.email, password: self.password)
+                    print("アカウント作成成功")
+                    self.isSuccessCreateUser.onNext(true)
+                }
+                catch{
+                    print("アカウント作成失敗",error)
+                    self.isSuccessCreateUser.onError(error)
+                }
+            }
         })
         .disposed(by: disposeBag)
 
