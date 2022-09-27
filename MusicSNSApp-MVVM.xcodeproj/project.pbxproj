@@ -38,6 +38,8 @@
 		9534AA6428DFEFE60065FDD5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9534AA6328DFEFE60065FDD5 /* User.swift */; };
 		9534AA6928DFF3140065FDD5 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9534AA6828DFF3140065FDD5 /* LoginViewModel.swift */; };
 		9598109028E027560073A7AF /* RegisterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9598108F28E027560073A7AF /* RegisterUser.swift */; };
+		95FEDA8428E2CFFE00178CDE /* SearchMusicTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FEDA8328E2CFFE00178CDE /* SearchMusicTableViewDataSource.swift */; };
+		95FEDA8628E2D0C500178CDE /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FEDA8528E2D0C500178CDE /* Music.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +67,8 @@
 		9534AA6328DFEFE60065FDD5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9534AA6828DFF3140065FDD5 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		9598108F28E027560073A7AF /* RegisterUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUser.swift; sourceTree = "<group>"; };
+		95FEDA8328E2CFFE00178CDE /* SearchMusicTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMusicTableViewDataSource.swift; sourceTree = "<group>"; };
+		95FEDA8528E2D0C500178CDE /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 		950DAC7128D9909600AC27DA /* MusicSNSApp-MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				95FEDA8228E2CF9D00178CDE /* DataSource */,
 				950DACA428D998EB00AC27DA /* Model */,
 				950DACA328D998E600AC27DA /* Views */,
 				950DACA228D998DD00AC27DA /* ViewModels */,
@@ -144,6 +149,7 @@
 			children = (
 				9534AA6328DFEFE60065FDD5 /* User.swift */,
 				9598108F28E027560073A7AF /* RegisterUser.swift */,
+				95FEDA8528E2D0C500178CDE /* Music.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -211,6 +217,14 @@
 				9534AA6028DEF3070065FDD5 /* LoginViewController.xib */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		95FEDA8228E2CF9D00178CDE /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				95FEDA8328E2CFFE00178CDE /* SearchMusicTableViewDataSource.swift */,
+			);
+			path = DataSource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,6 +332,8 @@
 				9534AA5628DEED6D0065FDD5 /* MusicTableViewCell.swift in Sources */,
 				950DAC7328D9909600AC27DA /* AppDelegate.swift in Sources */,
 				9534AA6928DFF3140065FDD5 /* LoginViewModel.swift in Sources */,
+				95FEDA8428E2CFFE00178CDE /* SearchMusicTableViewDataSource.swift in Sources */,
+				95FEDA8628E2D0C500178CDE /* Music.swift in Sources */,
 				9534AA6428DFEFE60065FDD5 /* User.swift in Sources */,
 				950DAC7528D9909600AC27DA /* SceneDelegate.swift in Sources */,
 			);
