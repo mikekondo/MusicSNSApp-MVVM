@@ -12,6 +12,10 @@ class MusicTableViewCell: UITableViewCell {
     @IBOutlet private weak var artWorkImageView: UIImageView!
     @IBOutlet private weak var trackNameLabel: UILabel!
     @IBOutlet private weak var artistNameLabel: UILabel!
+
+    static var identifier = "MusicCell"
+    static var nibName = "MusicTableViewCell"
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
