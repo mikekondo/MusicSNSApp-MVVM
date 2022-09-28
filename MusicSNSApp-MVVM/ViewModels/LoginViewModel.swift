@@ -7,8 +7,8 @@
 
 import RxSwift
 import RxRelay
-import SwiftUI
 
+// MARK: - Inputs
 protocol LoginViewModelInputs {
     var userNameTextFieldObservable: Observable<String> { get }
     var emailTextFieldObservable: Observable<String> { get }
@@ -17,6 +17,7 @@ protocol LoginViewModelInputs {
     var profileImageTapButtonObservable: Observable<Void> { get }
 }
 
+// MARK: - Outputs
 protocol LoginViewModelOutputs {
     // アカウント登録可能のフラグ（userName, email. passwordの文字数指定）
     var isValidRegister: PublishSubject<Bool> { get }
@@ -64,9 +65,11 @@ class LoginViewModel: LoginViewModelInputs, LoginViewModelOutputs{
         self.passwordTextFieldObservable = passwordTextFieldObservable
         self.registerButtonTapObservable = registerButtonTapObservable
         self.profileImageTapButtonObservable = profileImageTapButtonObservable
+
+        setupBindings()
     }
 
-    func setupBindings() {
+    private func setupBindings() {
 
         let userNameValid = userNameTextFieldObservable.asObservable().map { text -> Bool in
             return text.count >= 2

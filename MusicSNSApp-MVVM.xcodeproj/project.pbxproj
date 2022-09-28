@@ -40,6 +40,7 @@
 		9598109028E027560073A7AF /* RegisterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9598108F28E027560073A7AF /* RegisterUser.swift */; };
 		95FEDA8428E2CFFE00178CDE /* SearchMusicTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FEDA8328E2CFFE00178CDE /* SearchMusicTableViewDataSource.swift */; };
 		95FEDA8628E2D0C500178CDE /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FEDA8528E2D0C500178CDE /* Music.swift */; };
+		95FEDA8828E3CBA100178CDE /* SearchMusicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FEDA8728E3CBA100178CDE /* SearchMusicViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,7 @@
 		9598108F28E027560073A7AF /* RegisterUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUser.swift; sourceTree = "<group>"; };
 		95FEDA8328E2CFFE00178CDE /* SearchMusicTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMusicTableViewDataSource.swift; sourceTree = "<group>"; };
 		95FEDA8528E2D0C500178CDE /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
+		95FEDA8728E3CBA100178CDE /* SearchMusicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMusicViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				9534AA6828DFF3140065FDD5 /* LoginViewModel.swift */,
+				95FEDA8728E3CBA100178CDE /* SearchMusicViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95FEDA8828E3CBA100178CDE /* SearchMusicViewModel.swift in Sources */,
 				9534AA6128DEF3070065FDD5 /* LoginViewController.swift in Sources */,
 				9598109028E027560073A7AF /* RegisterUser.swift in Sources */,
 				950DACB228D999EC00AC27DA /* ProfileViewController.swift in Sources */,

@@ -19,5 +19,11 @@ struct MusicInfo: Codable {
 }
 
 class Music {
-
+    // .resultsでreturnしたいので[MusicInfo]にしている
+    func fetchMusicData(url: URL) async throws -> [MusicInfo] {
+        let request = URLRequest(url: url)
+        let (data, _) = try await URLSession.shared.data(for: request)
+        let musicInfos = try JSONDecoder().decode(MusicInfos.self, from: data)
+        return musicInfos.results
+    }
 }

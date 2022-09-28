@@ -33,10 +33,10 @@ class LoginViewController: UIViewController {
         registerButton.isEnabled = false
 
         setupProfileImage()
+        setupBindings()
+    }
 
-        // MARK: Binding
-        loginViewModel.setupBindings()
-
+    private func setupBindings() {
         // ボタンの有効化、無効化
         loginViewModel.isValidRegister.subscribe(onNext: { validAll in
             self.registerButton.isEnabled = validAll

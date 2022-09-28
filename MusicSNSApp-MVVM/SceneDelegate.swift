@@ -21,18 +21,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: scene)
 
         // 本番
-//        if let uid = Auth.auth().currentUser?.uid {
-//            print("ログイン済みです",uid)
-//            window?.rootViewController = MainTabBarViewController()
-//            window?.makeKeyAndVisible()
-//        }else {
-//            window?.rootViewController = LoginViewController()
-//            window?.makeKeyAndVisible()
-//        }
-
-        window?.rootViewController = LoginViewController()
-        window?.makeKeyAndVisible()
-
+        if let uid = Auth.auth().currentUser?.uid {
+            print("ログイン済みです",uid)
+            window?.rootViewController = MainTabBarViewController()
+            window?.makeKeyAndVisible()
+        }else {
+            window?.rootViewController = LoginViewController()
+            window?.makeKeyAndVisible()
+        }
 
     }
 
