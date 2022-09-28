@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class MusicTableViewCell: UITableViewCell {
 
@@ -16,7 +17,7 @@ class MusicTableViewCell: UITableViewCell {
     static var identifier = "MusicCell"
     static var nibName = "MusicTableViewCell"
 
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -26,6 +27,16 @@ class MusicTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+
+    func configure(musicInfo: MusicInfo) {
+        var musicInfo = musicInfo
+        trackNameLabel.text = musicInfo.trackName
+        artistNameLabel.text = musicInfo.artistName
+        if let range = musicInfo.artworkUrl100.range(of: "100x100bb") {
+            musicInfo.artworkUrl100.replaceSubrange(range, with: "2000x2000bb")
+        }
+        artWorkImageView.sd_setImage(with: URL(string: musicInfo.artworkUrl100))
     }
     
 }

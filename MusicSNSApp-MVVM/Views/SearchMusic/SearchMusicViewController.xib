@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchMusicViewController" customModule="MusicSNSApp_MVVM" customModuleProvider="target">
             <connections>
+                <outlet property="searchBar" destination="3OX-XZ-KnK" id="Uxc-oK-2Vn"/>
+                <outlet property="tableView" destination="uje-Kx-bie" id="dMg-RH-udq"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
