@@ -37,11 +37,31 @@
 		9534AA6228DEF3070065FDD5 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9534AA6028DEF3070065FDD5 /* LoginViewController.xib */; };
 		9534AA6428DFEFE60065FDD5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9534AA6328DFEFE60065FDD5 /* User.swift */; };
 		9534AA6928DFF3140065FDD5 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9534AA6828DFF3140065FDD5 /* LoginViewModel.swift */; };
+		95680B4128EC365F00FDDBBC /* MusicSNSApp_MVVMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95680B4028EC365F00FDDBBC /* MusicSNSApp_MVVMUITests.swift */; };
+		95680B4328EC365F00FDDBBC /* MusicSNSApp_MVVMUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95680B4228EC365F00FDDBBC /* MusicSNSApp_MVVMUITestsLaunchTests.swift */; };
+		95680B5028EC366B00FDDBBC /* MusicSNSApp_MVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95680B4F28EC366B00FDDBBC /* MusicSNSApp_MVVMTests.swift */; };
 		9598109028E027560073A7AF /* RegisterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9598108F28E027560073A7AF /* RegisterUser.swift */; };
 		95FEDA8428E2CFFE00178CDE /* SearchMusicTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FEDA8328E2CFFE00178CDE /* SearchMusicTableViewDataSource.swift */; };
 		95FEDA8628E2D0C500178CDE /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FEDA8528E2D0C500178CDE /* Music.swift */; };
 		95FEDA8828E3CBA100178CDE /* SearchMusicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FEDA8728E3CBA100178CDE /* SearchMusicViewModel.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		95680B4428EC365F00FDDBBC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 950DAC6728D9909600AC27DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 950DAC6E28D9909600AC27DA;
+			remoteInfo = "MusicSNSApp-MVVM";
+		};
+		95680B5128EC366B00FDDBBC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 950DAC6728D9909600AC27DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 950DAC6E28D9909600AC27DA;
+			remoteInfo = "MusicSNSApp-MVVM";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		950DAC6F28D9909600AC27DA /* MusicSNSApp-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MusicSNSApp-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +87,11 @@
 		9534AA6028DEF3070065FDD5 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		9534AA6328DFEFE60065FDD5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9534AA6828DFF3140065FDD5 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		95680B3E28EC365F00FDDBBC /* MusicSNSApp-MVVMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MusicSNSApp-MVVMUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		95680B4028EC365F00FDDBBC /* MusicSNSApp_MVVMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSNSApp_MVVMUITests.swift; sourceTree = "<group>"; };
+		95680B4228EC365F00FDDBBC /* MusicSNSApp_MVVMUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSNSApp_MVVMUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		95680B4D28EC366B00FDDBBC /* MusicSNSApp-MVVMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MusicSNSApp-MVVMTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		95680B4F28EC366B00FDDBBC /* MusicSNSApp_MVVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSNSApp_MVVMTests.swift; sourceTree = "<group>"; };
 		9598108F28E027560073A7AF /* RegisterUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUser.swift; sourceTree = "<group>"; };
 		95FEDA8328E2CFFE00178CDE /* SearchMusicTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMusicTableViewDataSource.swift; sourceTree = "<group>"; };
 		95FEDA8528E2D0C500178CDE /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
@@ -90,6 +115,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		95680B3B28EC365F00FDDBBC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95680B4A28EC366B00FDDBBC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -97,6 +136,8 @@
 			isa = PBXGroup;
 			children = (
 				950DAC7128D9909600AC27DA /* MusicSNSApp-MVVM */,
+				95680B3F28EC365F00FDDBBC /* MusicSNSApp-MVVMUITests */,
+				95680B4E28EC366B00FDDBBC /* MusicSNSApp-MVVMTests */,
 				950DAC7028D9909600AC27DA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -105,6 +146,8 @@
 			isa = PBXGroup;
 			children = (
 				950DAC6F28D9909600AC27DA /* MusicSNSApp-MVVM.app */,
+				95680B3E28EC365F00FDDBBC /* MusicSNSApp-MVVMUITests.xctest */,
+				95680B4D28EC366B00FDDBBC /* MusicSNSApp-MVVMTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -222,6 +265,23 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		95680B3F28EC365F00FDDBBC /* MusicSNSApp-MVVMUITests */ = {
+			isa = PBXGroup;
+			children = (
+				95680B4028EC365F00FDDBBC /* MusicSNSApp_MVVMUITests.swift */,
+				95680B4228EC365F00FDDBBC /* MusicSNSApp_MVVMUITestsLaunchTests.swift */,
+			);
+			path = "MusicSNSApp-MVVMUITests";
+			sourceTree = "<group>";
+		};
+		95680B4E28EC366B00FDDBBC /* MusicSNSApp-MVVMTests */ = {
+			isa = PBXGroup;
+			children = (
+				95680B4F28EC366B00FDDBBC /* MusicSNSApp_MVVMTests.swift */,
+			);
+			path = "MusicSNSApp-MVVMTests";
+			sourceTree = "<group>";
+		};
 		95FEDA8228E2CF9D00178CDE /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
@@ -261,6 +321,42 @@
 			productReference = 950DAC6F28D9909600AC27DA /* MusicSNSApp-MVVM.app */;
 			productType = "com.apple.product-type.application";
 		};
+		95680B3D28EC365F00FDDBBC /* MusicSNSApp-MVVMUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95680B4828EC365F00FDDBBC /* Build configuration list for PBXNativeTarget "MusicSNSApp-MVVMUITests" */;
+			buildPhases = (
+				95680B3A28EC365F00FDDBBC /* Sources */,
+				95680B3B28EC365F00FDDBBC /* Frameworks */,
+				95680B3C28EC365F00FDDBBC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				95680B4528EC365F00FDDBBC /* PBXTargetDependency */,
+			);
+			name = "MusicSNSApp-MVVMUITests";
+			productName = "MusicSNSApp-MVVMUITests";
+			productReference = 95680B3E28EC365F00FDDBBC /* MusicSNSApp-MVVMUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		95680B4C28EC366B00FDDBBC /* MusicSNSApp-MVVMTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95680B5328EC366B00FDDBBC /* Build configuration list for PBXNativeTarget "MusicSNSApp-MVVMTests" */;
+			buildPhases = (
+				95680B4928EC366B00FDDBBC /* Sources */,
+				95680B4A28EC366B00FDDBBC /* Frameworks */,
+				95680B4B28EC366B00FDDBBC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				95680B5228EC366B00FDDBBC /* PBXTargetDependency */,
+			);
+			name = "MusicSNSApp-MVVMTests";
+			productName = "MusicSNSApp-MVVMTests";
+			productReference = 95680B4D28EC366B00FDDBBC /* MusicSNSApp-MVVMTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -268,11 +364,19 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1340;
+				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
 					950DAC6E28D9909600AC27DA = {
 						CreatedOnToolsVersion = 13.4.1;
+					};
+					95680B3D28EC365F00FDDBBC = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 950DAC6E28D9909600AC27DA;
+					};
+					95680B4C28EC366B00FDDBBC = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 950DAC6E28D9909600AC27DA;
 					};
 				};
 			};
@@ -296,6 +400,8 @@
 			projectRoot = "";
 			targets = (
 				950DAC6E28D9909600AC27DA /* MusicSNSApp-MVVM */,
+				95680B3D28EC365F00FDDBBC /* MusicSNSApp-MVVMUITests */,
+				95680B4C28EC366B00FDDBBC /* MusicSNSApp-MVVMTests */,
 			);
 		};
 /* End PBXProject section */
@@ -315,6 +421,20 @@
 				950DACA128D997A500AC27DA /* MainTabBarViewController.xib in Resources */,
 				950DAC7C28D9909700AC27DA /* Assets.xcassets in Resources */,
 				950DACA928D9995A00AC27DA /* SearchMusicViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95680B3C28EC365F00FDDBBC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95680B4B28EC366B00FDDBBC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,7 +463,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		95680B3A28EC365F00FDDBBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95680B4128EC365F00FDDBBC /* MusicSNSApp_MVVMUITests.swift in Sources */,
+				95680B4328EC365F00FDDBBC /* MusicSNSApp_MVVMUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95680B4928EC366B00FDDBBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95680B5028EC366B00FDDBBC /* MusicSNSApp_MVVMTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		95680B4528EC365F00FDDBBC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 950DAC6E28D9909600AC27DA /* MusicSNSApp-MVVM */;
+			targetProxy = 95680B4428EC365F00FDDBBC /* PBXContainerItemProxy */;
+		};
+		95680B5228EC366B00FDDBBC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 950DAC6E28D9909600AC27DA /* MusicSNSApp-MVVM */;
+			targetProxy = 95680B5128EC366B00FDDBBC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		950DAC7D28D9909700AC27DA /* LaunchScreen.storyboard */ = {
@@ -525,6 +675,84 @@
 			};
 			name = Release;
 		};
+		95680B4628EC365F00FDDBBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7X9S244452;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mkondo.MusicSNSApp-MVVMUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "MusicSNSApp-MVVM";
+			};
+			name = Debug;
+		};
+		95680B4728EC365F00FDDBBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7X9S244452;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mkondo.MusicSNSApp-MVVMUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "MusicSNSApp-MVVM";
+			};
+			name = Release;
+		};
+		95680B5428EC366B00FDDBBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7X9S244452;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mkondo.MusicSNSApp-MVVMTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MusicSNSApp-MVVM.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MusicSNSApp-MVVM";
+			};
+			name = Debug;
+		};
+		95680B5528EC366B00FDDBBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7X9S244452;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mkondo.MusicSNSApp-MVVMTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MusicSNSApp-MVVM.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MusicSNSApp-MVVM";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -542,6 +770,24 @@
 			buildConfigurations = (
 				950DAC8428D9909700AC27DA /* Debug */,
 				950DAC8528D9909700AC27DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95680B4828EC365F00FDDBBC /* Build configuration list for PBXNativeTarget "MusicSNSApp-MVVMUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95680B4628EC365F00FDDBBC /* Debug */,
+				95680B4728EC365F00FDDBBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95680B5328EC366B00FDDBBC /* Build configuration list for PBXNativeTarget "MusicSNSApp-MVVMTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95680B5428EC366B00FDDBBC /* Debug */,
+				95680B5528EC366B00FDDBBC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
