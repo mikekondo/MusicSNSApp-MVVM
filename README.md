@@ -1,4 +1,4 @@
-# MusicSNSApp-MVVM
+## MusicSNSApp-MVVM（個人開発）
 楽曲写真とコメントを投稿し好きな音楽を共有するSNSアプリ（Insta風）
 
 ## 使用技術・ライブラリ
