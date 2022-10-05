@@ -13,7 +13,7 @@
 - SwiftLint
 
 ## アーキテクチャ・開発方法
-- MVVM
+- MVVM (Model View ViewModel)
 - チケット駆動開発
 - テスト駆動開発
 
