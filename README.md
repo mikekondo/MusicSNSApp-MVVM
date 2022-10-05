@@ -6,9 +6,10 @@
 - RxSwift
 - RxCocoa
 - RxRelay
-- Firebase(store,Auth,storage)
+- Firebase(Store,Auth,Storage)
 - PKHUD
 - SDWebImage
+- URLSession
 - SwiftLint
 
 ## アーキテクチャ・開発方法
