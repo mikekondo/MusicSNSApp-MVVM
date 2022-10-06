@@ -22,6 +22,8 @@ class PostMusicViewController: UIViewController {
     // MARK: - Model Connect
     var selectedMusic: MusicInfo?
 
+    private let disposeBag = DisposeBag()
+
     private lazy var postViewModel = PostMusicViewModel(commentTextViewObservable: commentTextView.rx.text.map{$0 ?? ""}.asObservable(), postButtonTapObservable: postButton.rx.tap.asObservable())
 
 
@@ -39,7 +41,12 @@ class PostMusicViewController: UIViewController {
     }
 
     private func setupBindings() {
-        postViewModel.isPostSuccess
+        postViewModel.isPostSuccess.subscribe (onError: { error in
+            HUD.flash(.labeledError(title: "失敗", subtitle: "コメントを入力してください?"),delay: 1)
+            print(error)
+        }, onCompleted: { [weak self] in
+            HUD.flash(.labeledSuccess(title: "成功", subtitle: "投稿されました"),delay: 1)
+        }).disposed(by: disposeBag)
     }
 
 }
