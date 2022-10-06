@@ -14,6 +14,7 @@
 
 ## アーキテクチャ・開発方法
 - MVVM (Model View ViewModel)
+- Storyboardを使用せず、Xibを使用
 - チケット駆動開発
 - テスト駆動開発
 
