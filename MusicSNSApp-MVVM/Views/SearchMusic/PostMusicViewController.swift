@@ -9,6 +9,8 @@ import UIKit
 
 class PostMusicViewController: UIViewController {
 
+    var selectedMusic: MusicInfo?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

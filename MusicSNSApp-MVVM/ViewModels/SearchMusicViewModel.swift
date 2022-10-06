@@ -54,4 +54,8 @@ class SearchMusicViewModel: SearchMusicViewModelInputs, SearchMusicViewModelOutp
             }
         }).disposed(by: disposeBag)
     }
+
+    func fetchSelectedMusic(index: Int) -> MusicInfo {
+        return musicInfos[index]
+    }
 }
