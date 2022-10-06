@@ -56,6 +56,9 @@ class SearchMusicViewModel: SearchMusicViewModelInputs, SearchMusicViewModelOutp
     }
 
     func fetchSelectedMusic(index: Int) -> MusicInfo {
+        if let range = musicInfos[index].artworkUrl100.range(of: "100x100bb"){
+            musicInfos[index].artworkUrl100.replaceSubrange(range, with: "2000x2000bb")
+        }
         return musicInfos[index]
     }
 }

@@ -38,6 +38,7 @@ class SearchMusicViewController: UIViewController {
         }).disposed(by: disposeBag)
     }
 
+
     private func setupBindings() {
         searchMusicViewModel.fetchMusicPublishSubject
             .bind(to: tableView.rx.items(dataSource: SearchMusicTableViewDataSource()))
