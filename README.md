@@ -2,11 +2,11 @@
 楽曲写真とコメントを投稿し好きな音楽を共有するSNSアプリ（Insta風）
 
 ## 使用技術・ライブラリ
-- SwiftPackageManeger（ライブラリ管理）
+- SwiftPackageManeger （ライブラリ管理）
 - RxSwift
 - RxCocoa
 - RxRelay
-- Firebase(Store,Auth,Storage)
+- Firebase (Store, Auth, Storage)
 - PKHUD
 - SDWebImage
 - URLSession
