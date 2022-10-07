@@ -22,16 +22,7 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet private weak var artistNameLabel: UILabel!
 
     static let identifier = "PostTableViewCell"
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+    static let nibName = "PostTableViewCell"
 
     func configure(post: Post) {
         trackNameLabel.text = post.trackName
