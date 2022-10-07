@@ -42,10 +42,15 @@ class PostMusicViewController: UIViewController {
 
     private func setupBindings() {
         postViewModel.postMusicPublishSubject.subscribe (onError: { error in
-            HUD.flash(.labeledError(title: "失敗", subtitle: "コメントを入力してください?"),delay: 1)
-            print(error)
-        }, onCompleted: { [weak self] in
-            HUD.flash(.labeledSuccess(title: "成功", subtitle: "投稿されました"),delay: 1)
+            DispatchQueue.main.async {
+                HUD.flash(.labeledError(title: "失敗", subtitle: "コメントを入力してください"),delay: 1)
+                print(error)
+            }
+        }, onCompleted: {
+            DispatchQueue.main.async {
+                print("成功してる？")
+                HUD.flash(.labeledSuccess(title: "成功", subtitle: "投稿されました"),delay: 1)
+            }
         }).disposed(by: disposeBag)
     }
 

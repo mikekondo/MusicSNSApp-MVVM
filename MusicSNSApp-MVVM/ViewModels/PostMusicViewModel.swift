@@ -57,6 +57,7 @@ class PostMusicViewModel: PostMusicViewModelInput,PostMusicViewModelOutput{
             // コメントが空ならエラー送信
             if self.postComment.isEmpty == true {
                 self.postMusicPublishSubject.onError(TestError.any)
+                return
             }
             Task{
                 do{
