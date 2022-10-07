@@ -9,8 +9,8 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-private enum TestError: Error{
-    case any
+private enum commentError: Error{
+    case empty
 }
 
 // MARK: - Inputs
@@ -56,7 +56,7 @@ class PostMusicViewModel: PostMusicViewModelInput,PostMusicViewModelOutput{
             guard let selectedMusic = self.selectedMusic else { return }
             // コメントが空ならエラー送信
             if self.postComment.isEmpty == true {
-                self.postMusicPublishSubject.onError(TestError.any)
+                self.postMusicPublishSubject.onError(commentError.empty)
                 return
             }
             Task{
