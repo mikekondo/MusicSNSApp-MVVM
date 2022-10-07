@@ -49,6 +49,7 @@
 		95B5F8DC28EFEEAA00F0C0E2 /* LoadPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B5F8DB28EFEEAA00F0C0E2 /* LoadPost.swift */; };
 		95EC073428EE9998000AD0D5 /* PostMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EC073228EE9998000AD0D5 /* PostMusicViewController.swift */; };
 		95EC073528EE9998000AD0D5 /* PostMusicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95EC073328EE9998000AD0D5 /* PostMusicViewController.xib */; };
+		95F64BCF28F02DA9001FC2D1 /* LoadUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F64BCE28F02DA9001FC2D1 /* LoadUser.swift */; };
 		95FEDA8428E2CFFE00178CDE /* SearchMusicTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FEDA8328E2CFFE00178CDE /* SearchMusicTableViewDataSource.swift */; };
 		95FEDA8628E2D0C500178CDE /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FEDA8528E2D0C500178CDE /* Music.swift */; };
 		95FEDA8828E3CBA100178CDE /* SearchMusicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FEDA8728E3CBA100178CDE /* SearchMusicViewModel.swift */; };
@@ -109,6 +110,7 @@
 		95B5F8DB28EFEEAA00F0C0E2 /* LoadPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadPost.swift; sourceTree = "<group>"; };
 		95EC073228EE9998000AD0D5 /* PostMusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostMusicViewController.swift; sourceTree = "<group>"; };
 		95EC073328EE9998000AD0D5 /* PostMusicViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostMusicViewController.xib; sourceTree = "<group>"; };
+		95F64BCE28F02DA9001FC2D1 /* LoadUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadUser.swift; sourceTree = "<group>"; };
 		95FEDA8328E2CFFE00178CDE /* SearchMusicTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMusicTableViewDataSource.swift; sourceTree = "<group>"; };
 		95FEDA8528E2D0C500178CDE /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
 		95FEDA8728E3CBA100178CDE /* SearchMusicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMusicViewModel.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 				959FCB2D28EEACB500B15130 /* Post.swift */,
 				959FCB2F28EECBE800B15130 /* RegisterPost.swift */,
 				95B5F8DB28EFEEAA00F0C0E2 /* LoadPost.swift */,
+				95F64BCE28F02DA9001FC2D1 /* LoadUser.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -491,6 +494,7 @@
 				950DACA028D997A500AC27DA /* MainTabBarViewController.swift in Sources */,
 				9534AA5628DEED6D0065FDD5 /* MusicTableViewCell.swift in Sources */,
 				950DAC7328D9909600AC27DA /* AppDelegate.swift in Sources */,
+				95F64BCF28F02DA9001FC2D1 /* LoadUser.swift in Sources */,
 				9534AA6928DFF3140065FDD5 /* LoginViewModel.swift in Sources */,
 				95B5F8DA28EFEC3C00F0C0E2 /* PostListViewModel.swift in Sources */,
 				95FEDA8428E2CFFE00178CDE /* SearchMusicTableViewDataSource.swift in Sources */,
