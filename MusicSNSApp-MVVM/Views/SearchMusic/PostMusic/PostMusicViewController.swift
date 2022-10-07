@@ -13,11 +13,11 @@ import SDWebImage
 
 class PostMusicViewController: UIViewController {
     // MARK: - UI Parts
-    @IBOutlet weak var artworkImageView: UIImageView!
-    @IBOutlet weak var trackNameLabel: UILabel!
-    @IBOutlet weak var artistNameLabel: UILabel!
-    @IBOutlet weak var commentTextView: UITextView!
-    @IBOutlet weak var postButton: UIButton!
+    @IBOutlet private weak var artworkImageView: UIImageView!
+    @IBOutlet private weak var trackNameLabel: UILabel!
+    @IBOutlet private weak var artistNameLabel: UILabel!
+    @IBOutlet private weak var commentTextView: UITextView!
+    @IBOutlet private weak var postButton: UIButton!
 
     var selectedMusic: MusicInfo?
 
@@ -41,17 +41,24 @@ class PostMusicViewController: UIViewController {
     }
 
     private func setupBindings() {
-        postViewModel.postMusicPublishSubject.subscribe (onError: { error in
-            DispatchQueue.main.async {
-                HUD.flash(.labeledError(title: "失敗", subtitle: "コメントを入力してください"),delay: 1)
-                print(error)
-            }
-        }, onCompleted: {
-            DispatchQueue.main.async {
-                print("成功してる？")
-                HUD.flash(.labeledSuccess(title: "成功", subtitle: "投稿されました"),delay: 1)
+        postViewModel.postMusicPublishSubject.subscribe (onNext: { result in
+            switch result {
+            case .success:
+                DispatchQueue.main.async {
+                    HUD.flash(.labeledSuccess(title: "成功", subtitle: "投稿されました"),delay: 1)
+                }
+            case .failure:
+                DispatchQueue.main.async {
+                    HUD.flash(.labeledError(title: "失敗", subtitle: "失敗しました"),delay: 1)
+                }
+            case .empty:
+                DispatchQueue.main.async {
+                    HUD.flash(.labeledError(title: "失敗", subtitle: "コメントを入力してください"),delay: 1)
+                }
             }
         }).disposed(by: disposeBag)
+
+
     }
 
 }
