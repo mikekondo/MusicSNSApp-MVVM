@@ -39,7 +39,7 @@ class PostMusicViewModel: PostMusicViewModelInput,PostMusicViewModelOutput{
 
     private let disposeBag = DisposeBag()
 
-    private var comment = ""
+    private var postComment = ""
 
     init(commentTextViewObservable: Observable<String>,postButtonTapObservable: Observable<Void>){
         self.commentTextViewObservable = commentTextViewObservable
@@ -48,14 +48,25 @@ class PostMusicViewModel: PostMusicViewModelInput,PostMusicViewModelOutput{
     }
 
     private func setupBindings() {
-        commentTextViewObservable.subscribe { comment in
-            self.comment = comment
+        commentTextViewObservable.subscribe { postComment in
+            self.postComment = postComment
         }.disposed(by: disposeBag)
 
-        postButtonTapObservable.subscribe (onNext: { [weak self] in
-            // self?.isPostSuccess.onCompleted()
-            self?.postMusicPublishSubject.onError(TestError.any)
-            print("tap")
+        postButtonTapObservable.subscribe (onNext: {
+            guard let selectedMusic = self.selectedMusic else { return }
+            // コメントが空ならエラー送信
+            if self.postComment.isEmpty == true {
+                self.postMusicPublishSubject.onError(TestError.any)
+            }
+            Task{
+                do{
+                    try await self.registerPost.setPostToFirestore(selectedMusic: selectedMusic, postComment: self.postComment)
+                    self.postMusicPublishSubject.onCompleted()
+                }
+                catch{
+                    self.postMusicPublishSubject.onError(error)
+                }
+            }
         }).disposed(by: disposeBag)
     }
 
