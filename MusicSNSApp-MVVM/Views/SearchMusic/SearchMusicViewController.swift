@@ -11,8 +11,8 @@ import RxCocoa
 
 class SearchMusicViewController: UIViewController {
 
-    @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var searchBar: UISearchBar!
+    @IBOutlet private weak var tableView: UITableView!
 
     private lazy var searchMusicViewModel = SearchMusicViewModel(searchBarObservable: searchBar.rx.text.map{ $0 ?? ""}.asObservable())
 

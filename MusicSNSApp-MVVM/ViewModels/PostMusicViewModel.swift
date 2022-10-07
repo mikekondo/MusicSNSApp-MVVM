@@ -9,8 +9,10 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-private enum TestError: Error{
-    case any
+enum postResult: Error{
+    case success
+    case failure
+    case empty
 }
 
 // MARK: - Inputs
@@ -21,7 +23,7 @@ protocol PostMusicViewModelInput {
 
 // MARK: - Outputs
 protocol PostMusicViewModelOutput {
-    var postMusicPublishSubject: PublishSubject<Void> { get }
+    var postMusicPublishSubject: PublishSubject<postResult> { get }
 }
 
 class PostMusicViewModel: PostMusicViewModelInput,PostMusicViewModelOutput{
@@ -30,7 +32,7 @@ class PostMusicViewModel: PostMusicViewModelInput,PostMusicViewModelOutput{
     var postButtonTapObservable: RxSwift.Observable<Void>
 
     // MARK: - Outputs
-    var postMusicPublishSubject = RxSwift.PublishSubject<Void>()
+    var postMusicPublishSubject = RxSwift.PublishSubject<postResult>()
 
     // MARK: - Model Connect
     let registerPost = RegisterPost()
@@ -56,16 +58,16 @@ class PostMusicViewModel: PostMusicViewModelInput,PostMusicViewModelOutput{
             guard let selectedMusic = self.selectedMusic else { return }
             // コメントが空ならエラー送信
             if self.postComment.isEmpty == true {
-                self.postMusicPublishSubject.onError(TestError.any)
+                self.postMusicPublishSubject.onNext(postResult.empty)
                 return
             }
             Task{
                 do{
                     try await self.registerPost.setPostToFirestore(selectedMusic: selectedMusic, postComment: self.postComment)
-                    self.postMusicPublishSubject.onCompleted()
+                    self.postMusicPublishSubject.onNext(postResult.success)
                 }
                 catch{
-                    self.postMusicPublishSubject.onError(error)
+                    self.postMusicPublishSubject.onNext(postResult.failure)
                 }
             }
         }).disposed(by: disposeBag)
