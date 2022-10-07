@@ -19,18 +19,18 @@ class PostMusicViewController: UIViewController {
     @IBOutlet weak var commentTextView: UITextView!
     @IBOutlet weak var postButton: UIButton!
 
-    // MARK: - Model Connect
     var selectedMusic: MusicInfo?
 
     private let disposeBag = DisposeBag()
 
     private lazy var postViewModel = PostMusicViewModel(commentTextViewObservable: commentTextView.rx.text.map{$0 ?? ""}.asObservable(), postButtonTapObservable: postButton.rx.tap.asObservable())
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         setupBindings()
+        // 選択された楽曲情報をViewModelに渡してあげる
+        postViewModel.selectedMusic = selectedMusic
     }
 
     private func setupView() {
@@ -41,11 +41,16 @@ class PostMusicViewController: UIViewController {
     }
 
     private func setupBindings() {
-        postViewModel.isPostSuccess.subscribe (onError: { error in
-            HUD.flash(.labeledError(title: "失敗", subtitle: "コメントを入力してください?"),delay: 1)
-            print(error)
-        }, onCompleted: { [weak self] in
-            HUD.flash(.labeledSuccess(title: "成功", subtitle: "投稿されました"),delay: 1)
+        postViewModel.postMusicPublishSubject.subscribe (onError: { error in
+            DispatchQueue.main.async {
+                HUD.flash(.labeledError(title: "失敗", subtitle: "コメントを入力してください"),delay: 1)
+                print(error)
+            }
+        }, onCompleted: {
+            DispatchQueue.main.async {
+                print("成功してる？")
+                HUD.flash(.labeledSuccess(title: "成功", subtitle: "投稿されました"),delay: 1)
+            }
         }).disposed(by: disposeBag)
     }
 

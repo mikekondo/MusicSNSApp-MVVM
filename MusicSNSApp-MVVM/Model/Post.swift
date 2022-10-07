@@ -14,12 +14,13 @@ struct Post {
     let trackName: String
     let comment: String
     let createdAt: Timestamp
-
+    let uid: String
     init(dic: [String: Any]) {
         self.artistName = dic["artistName"] as? String ?? ""
         self.trackName = dic["trackName"] as? String ?? ""
         self.comment = dic["comment"] as? String ?? ""
         self.artworkUrl = dic["artworkUrl"] as? String ?? ""
         self.createdAt = dic["createdAt"] as? Timestamp ?? Timestamp()
+        self.uid = dic["uid"] as? String ?? ""
     }
 }
