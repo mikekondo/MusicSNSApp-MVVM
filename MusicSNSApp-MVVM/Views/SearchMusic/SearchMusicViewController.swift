@@ -28,6 +28,13 @@ class SearchMusicViewController: UIViewController {
     private func setupTableView() {
         tableView.rowHeight = 70
         tableView.register(UINib(nibName: MusicTableViewCell.nibName, bundle: nil), forCellReuseIdentifier: MusicTableViewCell.identifier)
+    }
+
+
+    private func setupBindings() {
+        searchMusicViewModel.fetchMusicPublishSubject
+            .bind(to: tableView.rx.items(dataSource: SearchMusicTableViewDataSource()))
+            .disposed(by: disposeBag)
 
         // セルの選択時にPostMusicViewControllerに遷移
         tableView.rx.itemSelected.subscribe (onNext: { [weak self] indexPath in
@@ -36,12 +43,5 @@ class SearchMusicViewController: UIViewController {
             postMusicViewController.selectedMusic = selectedMusic
             self?.navigationController?.pushViewController(postMusicViewController, animated: true)
         }).disposed(by: disposeBag)
-    }
-
-
-    private func setupBindings() {
-        searchMusicViewModel.fetchMusicPublishSubject
-            .bind(to: tableView.rx.items(dataSource: SearchMusicTableViewDataSource()))
-            .disposed(by: disposeBag)
     }
 }

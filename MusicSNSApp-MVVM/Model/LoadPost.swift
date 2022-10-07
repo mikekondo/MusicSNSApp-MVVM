@@ -13,7 +13,20 @@ import FirebaseAuth
 class LoadPost {
     let db = Firestore.firestore()
 
-    func fetchPostsFromFirestore() async throws -> [String: Any]?{
-        try await db.collection("Posts").document().getDocument().data()
+    // TODO: createdAt順にする
+    func fetchPostsFromFirestore(completion: @escaping([Post]?,Error?) -> Void){
+        db.collection("Posts").addSnapshotListener { snapShots, error in
+            if let error = error {
+                completion(nil,error)
+            }
+            var posts = [Post]()
+            guard let snapShots = snapShots else { return }
+            snapShots.documents.forEach({ snapShot in
+                let data = snapShot.data()
+                let post = Post(dic: data)
+                posts.append(post)
+            })
+            completion(posts,nil)
+        }
     }
 }
