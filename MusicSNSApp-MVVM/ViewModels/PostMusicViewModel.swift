@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-enum TestError: Error{
+private enum TestError: Error{
     case any
 }
 
@@ -21,16 +21,21 @@ protocol PostMusicViewModelInput {
 
 // MARK: - Outputs
 protocol PostMusicViewModelOutput {
-    var isPostSuccess: PublishSubject<Void> { get }
+    var postMusicPublishSubject: PublishSubject<Void> { get }
 }
 
 class PostMusicViewModel: PostMusicViewModelInput,PostMusicViewModelOutput{
-    // MARK: Inputs
+    // MARK: - Inputs
     var commentTextViewObservable: RxSwift.Observable<String>
     var postButtonTapObservable: RxSwift.Observable<Void>
 
-    // MARK: Outputs
-    var isPostSuccess = RxSwift.PublishSubject<Void>()
+    // MARK: - Outputs
+    var postMusicPublishSubject = RxSwift.PublishSubject<Void>()
+
+    // MARK: - Model Connect
+    let registerPost = RegisterPost()
+
+    var selectedMusic: MusicInfo?
 
     private let disposeBag = DisposeBag()
 
@@ -49,7 +54,7 @@ class PostMusicViewModel: PostMusicViewModelInput,PostMusicViewModelOutput{
 
         postButtonTapObservable.subscribe (onNext: { [weak self] in
             // self?.isPostSuccess.onCompleted()
-            self?.isPostSuccess.onError(TestError.any)
+            self?.postMusicPublishSubject.onError(TestError.any)
             print("tap")
         }).disposed(by: disposeBag)
     }
