@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="519" id="KGk-i7-Jjw" customClass="PostTableViewCell" customModule="MusicSNSApp_MVVM" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostTableViewCell" rowHeight="519" id="KGk-i7-Jjw" customClass="PostTableViewCell" customModule="MusicSNSApp_MVVM" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="550"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -73,6 +73,7 @@
             <connections>
                 <outlet property="artistNameLabel" destination="Qan-JT-2vL" id="bWx-ld-zdO"/>
                 <outlet property="commentButton" destination="AlI-VL-beB" id="0lT-Zt-1fW"/>
+                <outlet property="commentTextView" destination="YkX-EC-W8r" id="goK-gK-fRd"/>
                 <outlet property="likeButton" destination="lBv-qv-7es" id="Pt8-Jd-1Pu"/>
                 <outlet property="postImageView" destination="fZM-AS-544" id="I7l-XJ-qsm"/>
                 <outlet property="trackNameLabel" destination="Dkg-BN-fV4" id="wDu-9H-FPZ"/>

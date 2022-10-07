@@ -44,6 +44,7 @@
 		959FCB2C28EEA54D00B15130 /* PostMusicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959FCB2B28EEA54D00B15130 /* PostMusicViewModel.swift */; };
 		959FCB2E28EEACB500B15130 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959FCB2D28EEACB500B15130 /* Post.swift */; };
 		959FCB3028EECBE800B15130 /* RegisterPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959FCB2F28EECBE800B15130 /* RegisterPost.swift */; };
+		95B5F8D828EFE5F600F0C0E2 /* PostTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B5F8D728EFE5F600F0C0E2 /* PostTableViewDataSource.swift */; };
 		95EC073428EE9998000AD0D5 /* PostMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EC073228EE9998000AD0D5 /* PostMusicViewController.swift */; };
 		95EC073528EE9998000AD0D5 /* PostMusicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95EC073328EE9998000AD0D5 /* PostMusicViewController.xib */; };
 		95FEDA8428E2CFFE00178CDE /* SearchMusicTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FEDA8328E2CFFE00178CDE /* SearchMusicTableViewDataSource.swift */; };
@@ -101,6 +102,7 @@
 		959FCB2B28EEA54D00B15130 /* PostMusicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostMusicViewModel.swift; sourceTree = "<group>"; };
 		959FCB2D28EEACB500B15130 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		959FCB2F28EECBE800B15130 /* RegisterPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPost.swift; sourceTree = "<group>"; };
+		95B5F8D728EFE5F600F0C0E2 /* PostTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewDataSource.swift; sourceTree = "<group>"; };
 		95EC073228EE9998000AD0D5 /* PostMusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostMusicViewController.swift; sourceTree = "<group>"; };
 		95EC073328EE9998000AD0D5 /* PostMusicViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostMusicViewController.xib; sourceTree = "<group>"; };
 		95FEDA8328E2CFFE00178CDE /* SearchMusicTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMusicTableViewDataSource.swift; sourceTree = "<group>"; };
@@ -238,7 +240,7 @@
 			children = (
 				950DACAC28D9999B00AC27DA /* PostsListViewController.swift */,
 				950DACAD28D9999B00AC27DA /* PostsListViewController.xib */,
-				9534AA5928DEED8A0065FDD5 /* Cell */,
+				9534AA5928DEED8A0065FDD5 /* PostTableViewCell */,
 			);
 			path = PostsList;
 			sourceTree = "<group>";
@@ -261,13 +263,13 @@
 			path = SearchMusicCell;
 			sourceTree = "<group>";
 		};
-		9534AA5928DEED8A0065FDD5 /* Cell */ = {
+		9534AA5928DEED8A0065FDD5 /* PostTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
 				9534AA5A28DEED9D0065FDD5 /* PostTableViewCell.swift */,
 				9534AA5B28DEED9D0065FDD5 /* PostTableViewCell.xib */,
 			);
-			path = Cell;
+			path = PostTableViewCell;
 			sourceTree = "<group>";
 		};
 		9534AA5E28DEF2DF0065FDD5 /* Login */ = {
@@ -309,6 +311,7 @@
 			isa = PBXGroup;
 			children = (
 				95FEDA8328E2CFFE00178CDE /* SearchMusicTableViewDataSource.swift */,
+				95B5F8D728EFE5F600F0C0E2 /* PostTableViewDataSource.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -473,6 +476,7 @@
 				959FCB3028EECBE800B15130 /* RegisterPost.swift in Sources */,
 				9534AA6128DEF3070065FDD5 /* LoginViewController.swift in Sources */,
 				959FCB2C28EEA54D00B15130 /* PostMusicViewModel.swift in Sources */,
+				95B5F8D828EFE5F600F0C0E2 /* PostTableViewDataSource.swift in Sources */,
 				9598109028E027560073A7AF /* RegisterUser.swift in Sources */,
 				950DACB228D999EC00AC27DA /* ProfileViewController.swift in Sources */,
 				950DACA828D9995A00AC27DA /* SearchMusicViewController.swift in Sources */,

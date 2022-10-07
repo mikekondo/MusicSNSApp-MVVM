@@ -8,6 +8,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import SDWebImage
 
 class PostTableViewCell: UITableViewCell {
     // MARK: - UI Parts
@@ -17,9 +18,10 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet private weak var likeButton: UIButton!
     @IBOutlet private weak var commentButton: UIButton!
     @IBOutlet private weak var trackNameLabel: UILabel!
+    @IBOutlet private weak var commentTextView: UITextView!
     @IBOutlet private weak var artistNameLabel: UILabel!
 
-
+    static let identifier = "PostTableViewCell"
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -31,9 +33,11 @@ class PostTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    // いる？？
-    func configure() {
-
+    func configure(post: Post) {
+        trackNameLabel.text = post.trackName
+        artistNameLabel.text = post.artistName
+        commentTextView.text = post.comment
+        postImageView.sd_setImage(with: URL(string: post.artworkUrl))
     }
     
 }
