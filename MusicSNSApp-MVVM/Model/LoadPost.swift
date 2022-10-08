@@ -15,7 +15,7 @@ class LoadPost {
 
     // TODO: createdAt順にする
     func fetchPostsFromFirestore(completion: @escaping([Post]?,Error?) -> Void){
-        db.collection("Posts").addSnapshotListener { snapShots, error in
+        db.collection("Posts").order(by: "createdAt", descending: true).addSnapshotListener { snapShots, error in
             if let error = error {
                 completion(nil,error)
             }

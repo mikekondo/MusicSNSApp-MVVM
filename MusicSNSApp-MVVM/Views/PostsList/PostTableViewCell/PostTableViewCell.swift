@@ -28,7 +28,7 @@ class PostTableViewCell: UITableViewCell {
         userImageView.circle()
         trackNameLabel.text = post.trackName
         artistNameLabel.text = post.artistName
-        commentTextView.text = post.comment
+        commentTextView.text = post.postComment
         postImageView.sd_setImage(with: URL(string: post.artworkUrl))
         userNameLabel.text = post.userName
         userImageView.image = UIImage(named: "gohan")
