@@ -29,6 +29,7 @@ class PostTableViewCell: UITableViewCell {
         artistNameLabel.text = post.artistName
         commentTextView.text = post.comment
         postImageView.sd_setImage(with: URL(string: post.artworkUrl))
+        userNameLabel.text = post.userName
     }
     
 }
