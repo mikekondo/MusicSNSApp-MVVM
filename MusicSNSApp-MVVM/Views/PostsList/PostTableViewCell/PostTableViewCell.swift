@@ -25,11 +25,13 @@ class PostTableViewCell: UITableViewCell {
     static let nibName = "PostTableViewCell"
 
     func configure(post: Post) {
+        userImageView.circle()
         trackNameLabel.text = post.trackName
         artistNameLabel.text = post.artistName
         commentTextView.text = post.comment
         postImageView.sd_setImage(with: URL(string: post.artworkUrl))
         userNameLabel.text = post.userName
+        userImageView.image = UIImage(named: "gohan")
     }
     
 }

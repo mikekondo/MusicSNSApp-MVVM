@@ -6,3 +6,13 @@
 //
 
 import Foundation
+import UIKit
+
+extension UIImageView {
+
+    func circle() {
+        layer.masksToBounds = false
+        layer.cornerRadius = frame.width/2
+        clipsToBounds = true
+    }
+}
