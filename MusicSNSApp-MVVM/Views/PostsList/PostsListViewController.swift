@@ -30,8 +30,7 @@ class PostsListViewController: UIViewController {
     }
 
     private func setupBindings() {
-        postListViewModel.fetchPostPublishSubject
-            .bind(to: tableView.rx.items(dataSource: PostTableViewDataSource()))
+        postListViewModel.outputs.fetchPostPublishSubject.bind(to: tableView.rx.items(dataSource: PostTableViewDataSource()))
             .disposed(by: disposeBag)
     }
 
