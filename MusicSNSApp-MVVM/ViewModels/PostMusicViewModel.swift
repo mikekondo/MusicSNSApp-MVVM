@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-enum postResult: Error{
+enum postResult: Error {
     case success
     case failure
     case empty
@@ -24,6 +24,12 @@ protocol PostMusicViewModelInput {
 // MARK: - Outputs
 protocol PostMusicViewModelOutput {
     var postMusicPublishSubject: PublishSubject<postResult> { get }
+}
+
+// MARK: - Type
+protocol PostMusicViewModelType {
+    var inputs: PostMusicViewModelInput { get }
+    var outputs: PostMusicViewModelOutput { get }
 }
 
 class PostMusicViewModel: PostMusicViewModelInput,PostMusicViewModelOutput{
@@ -72,5 +78,11 @@ class PostMusicViewModel: PostMusicViewModelInput,PostMusicViewModelOutput{
             }
         }).disposed(by: disposeBag)
     }
+}
 
+// MARK: - PostMusicViewModelType
+extension PostMusicViewModel: PostMusicViewModelType {
+    var inputs: PostMusicViewModelInput { return self }
+
+    var outputs: PostMusicViewModelOutput { return self }
 }

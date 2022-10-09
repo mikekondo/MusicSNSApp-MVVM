@@ -23,10 +23,15 @@ protocol LoginViewModelOutputs {
     var isValidRegister: PublishSubject<Bool> { get }
     // アカウント登録成功のフラグ？（成功したら画面遷移）
     var isSuccessCreateUser: PublishSubject<Bool> { get }
-
 }
 
-class LoginViewModel: LoginViewModelInputs, LoginViewModelOutputs{
+// MARK: - Type
+protocol LoginViewModelType {
+    var inputs: LoginViewModelInputs { get }
+    var outputs: LoginViewModelOutputs { get }
+}
+
+class LoginViewModel: LoginViewModelInputs, LoginViewModelOutputs {
 
     // MARK: - Inputs
     var userNameTextFieldObservable: Observable<String>
@@ -111,6 +116,12 @@ class LoginViewModel: LoginViewModelInputs, LoginViewModelOutputs{
             }
         })
         .disposed(by: disposeBag)
-
     }
+}
+
+// MARK: - LoginViewModelType
+extension LoginViewModel: LoginViewModelType {
+    var inputs: LoginViewModelInputs { return self }
+    var outputs: LoginViewModelOutputs { return self }
+
 }

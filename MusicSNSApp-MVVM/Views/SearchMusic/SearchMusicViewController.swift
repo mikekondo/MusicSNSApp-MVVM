@@ -32,8 +32,7 @@ class SearchMusicViewController: UIViewController {
 
 
     private func setupBindings() {
-        searchMusicViewModel.fetchMusicPublishSubject
-            .bind(to: tableView.rx.items(dataSource: SearchMusicTableViewDataSource()))
+        searchMusicViewModel.outputs.fetchMusicPublishSubject .bind(to: tableView.rx.items(dataSource: SearchMusicTableViewDataSource()))
             .disposed(by: disposeBag)
 
         // セルの選択時にPostMusicViewControllerに遷移

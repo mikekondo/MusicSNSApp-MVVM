@@ -20,7 +20,13 @@ protocol PostListViewModelOutputs {
     var fetchPostPublishSubject: PublishSubject<[Post]> { get }
 }
 
-class PostListViewModel: PostListViewModelOutputs {
+// MARK: - Type
+protocol PostListViewModelType {
+    var inputs: PostListViewModelInputs { get }
+    var outputs: PostListViewModelOutputs { get }
+}
+
+class PostListViewModel: PostListViewModelOutputs, PostListViewModelInputs {
 
     // MARK: - Outputs
     var fetchPostPublishSubject =  RxSwift.PublishSubject<[Post]>()
@@ -42,5 +48,10 @@ class PostListViewModel: PostListViewModelOutputs {
             self.fetchPostPublishSubject.onNext(posts)
         }
     }
+}
 
+extension PostListViewModel: PostListViewModelType {
+    var inputs: PostListViewModelInputs { return self }
+
+    var outputs: PostListViewModelOutputs { return self }
 }
