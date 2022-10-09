@@ -38,13 +38,13 @@ class LoginViewController: UIViewController {
 
     private func setupBindings() {
         // ボタンの有効化、無効化
-        loginViewModel.isValidRegister.subscribe(onNext: { validAll in
+        loginViewModel.outputs.isValidRegister.subscribe(onNext: { validAll in
             self.registerButton.isEnabled = validAll
         })
         .disposed(by: disposeBag)
 
         // MainTabBarViewControllerに画面遷移
-        loginViewModel.isSuccessCreateUser.subscribe(onNext: { [weak self] success in
+        loginViewModel.outputs.isSuccessCreateUser.subscribe(onNext: { [weak self] success in
             // メインスレッドで実行
             DispatchQueue.main.async {
                 let mainTabBar = MainTabBarViewController()

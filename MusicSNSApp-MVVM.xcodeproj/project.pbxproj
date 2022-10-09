@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		950415D428F19CE8001CEE8F /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 950415D328F19CE8001CEE8F /* RxCocoa */; };
+		950415D628F19CE8001CEE8F /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 950415D528F19CE8001CEE8F /* RxRelay */; };
+		950415D828F19CE8001CEE8F /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 950415D728F19CE8001CEE8F /* RxSwift */; };
 		950DAC7328D9909600AC27DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950DAC7228D9909600AC27DA /* AppDelegate.swift */; };
 		950DAC7528D9909600AC27DA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950DAC7428D9909600AC27DA /* SceneDelegate.swift */; };
 		950DAC7C28D9909700AC27DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 950DAC7B28D9909700AC27DA /* Assets.xcassets */; };
@@ -17,9 +20,6 @@
 		950DAC8E28D9913D00AC27DA /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 950DAC8D28D9913D00AC27DA /* FirebaseStorage */; };
 		950DAC9128D9917800AC27DA /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 950DAC9028D9917800AC27DA /* SDWebImage */; };
 		950DAC9428D991AA00AC27DA /* PKHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 950DAC9328D991AA00AC27DA /* PKHUD */; };
-		950DAC9728D992E200AC27DA /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 950DAC9628D992E200AC27DA /* RxCocoa */; };
-		950DAC9928D992E200AC27DA /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 950DAC9828D992E200AC27DA /* RxRelay */; };
-		950DAC9B28D992E200AC27DA /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 950DAC9A28D992E200AC27DA /* RxSwift */; };
 		950DAC9D28D993B000AC27DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 950DAC9C28D993B000AC27DA /* GoogleService-Info.plist */; };
 		950DACA028D997A500AC27DA /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950DAC9E28D997A500AC27DA /* MainTabBarViewController.swift */; };
 		950DACA128D997A500AC27DA /* MainTabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 950DAC9F28D997A500AC27DA /* MainTabBarViewController.xib */; };
@@ -123,14 +123,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				950DAC9B28D992E200AC27DA /* RxSwift in Frameworks */,
+				950415D828F19CE8001CEE8F /* RxSwift in Frameworks */,
 				950DAC8828D9913D00AC27DA /* FirebaseAuth in Frameworks */,
 				950DAC8E28D9913D00AC27DA /* FirebaseStorage in Frameworks */,
 				950DAC8A28D9913D00AC27DA /* FirebaseFirestore in Frameworks */,
-				950DAC9728D992E200AC27DA /* RxCocoa in Frameworks */,
+				950415D428F19CE8001CEE8F /* RxCocoa in Frameworks */,
 				950DAC9428D991AA00AC27DA /* PKHUD in Frameworks */,
 				950DAC8C28D9913D00AC27DA /* FirebaseFirestoreSwift in Frameworks */,
-				950DAC9928D992E200AC27DA /* RxRelay in Frameworks */,
+				950415D628F19CE8001CEE8F /* RxRelay in Frameworks */,
 				950DAC9128D9917800AC27DA /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,9 +359,9 @@
 				950DAC8D28D9913D00AC27DA /* FirebaseStorage */,
 				950DAC9028D9917800AC27DA /* SDWebImage */,
 				950DAC9328D991AA00AC27DA /* PKHUD */,
-				950DAC9628D992E200AC27DA /* RxCocoa */,
-				950DAC9828D992E200AC27DA /* RxRelay */,
-				950DAC9A28D992E200AC27DA /* RxSwift */,
+				950415D328F19CE8001CEE8F /* RxCocoa */,
+				950415D528F19CE8001CEE8F /* RxRelay */,
+				950415D728F19CE8001CEE8F /* RxSwift */,
 			);
 			productName = "MusicSNSApp-MVVM";
 			productReference = 950DAC6F28D9909600AC27DA /* MusicSNSApp-MVVM.app */;
@@ -439,7 +439,7 @@
 				950DAC8628D9913D00AC27DA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				950DAC8F28D9917800AC27DA /* XCRemoteSwiftPackageReference "SDWebImage" */,
 				950DAC9228D991AA00AC27DA /* XCRemoteSwiftPackageReference "PKHUD" */,
-				950DAC9528D992E200AC27DA /* XCRemoteSwiftPackageReference "RxSwift" */,
+				950415D228F19CE8001CEE8F /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 950DAC7028D9909600AC27DA /* Products */;
 			projectDirPath = "";
@@ -851,6 +851,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		950415D228F19CE8001CEE8F /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		950DAC8628D9913D00AC27DA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
@@ -875,17 +883,24 @@
 				kind = branch;
 			};
 		};
-		950DAC9528D992E200AC27DA /* XCRemoteSwiftPackageReference "RxSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReactiveX/RxSwift";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.0.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		950415D328F19CE8001CEE8F /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 950415D228F19CE8001CEE8F /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		950415D528F19CE8001CEE8F /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 950415D228F19CE8001CEE8F /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		950415D728F19CE8001CEE8F /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 950415D228F19CE8001CEE8F /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
 		950DAC8728D9913D00AC27DA /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 950DAC8628D9913D00AC27DA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
@@ -915,21 +930,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 950DAC9228D991AA00AC27DA /* XCRemoteSwiftPackageReference "PKHUD" */;
 			productName = PKHUD;
-		};
-		950DAC9628D992E200AC27DA /* RxCocoa */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 950DAC9528D992E200AC27DA /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxCocoa;
-		};
-		950DAC9828D992E200AC27DA /* RxRelay */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 950DAC9528D992E200AC27DA /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxRelay;
-		};
-		950DAC9A28D992E200AC27DA /* RxSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 950DAC9528D992E200AC27DA /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

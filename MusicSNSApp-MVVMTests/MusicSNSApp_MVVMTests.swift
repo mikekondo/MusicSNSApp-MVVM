@@ -6,6 +6,7 @@
 //
 
 import XCTest
+@testable import MusicSNSApp_MVVM
 
 final class MusicSNSApp_MVVMTests: XCTestCase {
 
