@@ -19,6 +19,12 @@ protocol SearchMusicViewModelOutputs {
     var fetchMusicPublishSubject: PublishSubject<[MusicInfo]> { get }
 }
 
+// MARK: - Type
+protocol SearchMusicViewModelType {
+    var inputs: SearchMusicViewModelInputs { get }
+    var outputs: SearchMusicViewModelOutputs { get }
+}
+
 class SearchMusicViewModel: SearchMusicViewModelInputs, SearchMusicViewModelOutputs{
     // MARK: Input
     var searchBarObservable: Observable<String>
@@ -61,4 +67,10 @@ class SearchMusicViewModel: SearchMusicViewModelInputs, SearchMusicViewModelOutp
         }
         return musicInfos[index]
     }
+}
+
+extension SearchMusicViewModel: SearchMusicViewModelType {
+    var inputs: SearchMusicViewModelInputs { return self }
+
+    var outputs: SearchMusicViewModelOutputs { return self }
 }
