@@ -41,7 +41,7 @@ class PostMusicViewController: UIViewController {
     }
 
     private func setupBindings() {
-        postViewModel.postMusicPublishSubject.subscribe (onNext: { result in
+        postViewModel.outputs.postMusicPublishSubject.subscribe (onNext: { result in
             switch result {
             case .success:
                 DispatchQueue.main.async {
