@@ -50,6 +50,7 @@ class PostListViewModel: PostListViewModelOutputs, PostListViewModelInputs {
     }
 }
 
+// MARK: - PostListViewModelType
 extension PostListViewModel: PostListViewModelType {
     var inputs: PostListViewModelInputs { return self }
 

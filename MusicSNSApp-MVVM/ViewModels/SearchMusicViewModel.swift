@@ -69,6 +69,7 @@ class SearchMusicViewModel: SearchMusicViewModelInputs, SearchMusicViewModelOutp
     }
 }
 
+// MARK: - SearchMusicViewModelType
 extension SearchMusicViewModel: SearchMusicViewModelType {
     var inputs: SearchMusicViewModelInputs { return self }
 
