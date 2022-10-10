@@ -86,7 +86,7 @@
 		950DAC8028D9909700AC27DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		950DAC9C28D993B000AC27DA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		950DAC9E28D997A500AC27DA /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
-		950DAC9F28D997A500AC27DA /* MainTabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTabBarViewController.xib; sourceTree = "<group>"; };
+		950DAC9F28D997A500AC27DA /* MainTabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainTabBarViewController.xib; path = "MusicSNSApp-MVVM/Views/MainTabBar/MainTabBarViewController.xib"; sourceTree = SOURCE_ROOT; };
 		950DACA628D9995A00AC27DA /* SearchMusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMusicViewController.swift; sourceTree = "<group>"; };
 		950DACA728D9995A00AC27DA /* SearchMusicViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchMusicViewController.xib; sourceTree = "<group>"; };
 		950DACAC28D9999B00AC27DA /* PostsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsListViewController.swift; sourceTree = "<group>"; };
@@ -235,8 +235,7 @@
 		950DACA528D998F700AC27DA /* MainTabBar */ = {
 			isa = PBXGroup;
 			children = (
-				950DAC9F28D997A500AC27DA /* MainTabBarViewController.xib */,
-				950DAC9E28D997A500AC27DA /* MainTabBarViewController.swift */,
+				951E36C928F3ED7E0055F1A2 /* MainTabBarViewController */,
 			);
 			path = MainTabBar;
 			sourceTree = "<group>";
@@ -244,9 +243,8 @@
 		950DACAA28D9995F00AC27DA /* SearchMusic */ = {
 			isa = PBXGroup;
 			children = (
-				950DACA728D9995A00AC27DA /* SearchMusicViewController.xib */,
-				950DACA628D9995A00AC27DA /* SearchMusicViewController.swift */,
-				95EC073628EEA052000AD0D5 /* PostMusic */,
+				951E36C828F3ED490055F1A2 /* SearchMusicViewController */,
+				95EC073628EEA052000AD0D5 /* PostMusicViewController */,
 				9534AA5828DEED740065FDD5 /* SearchMusicCell */,
 			);
 			path = SearchMusic;
@@ -255,8 +253,7 @@
 		950DACAB28D9997E00AC27DA /* PostsList */ = {
 			isa = PBXGroup;
 			children = (
-				950DACAC28D9999B00AC27DA /* PostsListViewController.swift */,
-				950DACAD28D9999B00AC27DA /* PostsListViewController.xib */,
+				951E36C728F3ED300055F1A2 /* PostListViewController */,
 				9534AA5928DEED8A0065FDD5 /* PostTableViewCell */,
 			);
 			path = PostsList;
@@ -266,8 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				951E36AC28F3AB010055F1A2 /* MyPostCollectionViewCell */,
-				950DACB128D999EC00AC27DA /* ProfileViewController.xib */,
-				950DACB028D999EC00AC27DA /* ProfileViewController.swift */,
+				951E36C628F3ED100055F1A2 /* ProfileViewController */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -307,6 +303,42 @@
 				95B5F8DB28EFEEAA00F0C0E2 /* LoadPost.swift */,
 			);
 			path = Post;
+			sourceTree = "<group>";
+		};
+		951E36C628F3ED100055F1A2 /* ProfileViewController */ = {
+			isa = PBXGroup;
+			children = (
+				950DACB128D999EC00AC27DA /* ProfileViewController.xib */,
+				950DACB028D999EC00AC27DA /* ProfileViewController.swift */,
+			);
+			path = ProfileViewController;
+			sourceTree = "<group>";
+		};
+		951E36C728F3ED300055F1A2 /* PostListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				950DACAC28D9999B00AC27DA /* PostsListViewController.swift */,
+				950DACAD28D9999B00AC27DA /* PostsListViewController.xib */,
+			);
+			path = PostListViewController;
+			sourceTree = "<group>";
+		};
+		951E36C828F3ED490055F1A2 /* SearchMusicViewController */ = {
+			isa = PBXGroup;
+			children = (
+				950DACA728D9995A00AC27DA /* SearchMusicViewController.xib */,
+				950DACA628D9995A00AC27DA /* SearchMusicViewController.swift */,
+			);
+			path = SearchMusicViewController;
+			sourceTree = "<group>";
+		};
+		951E36C928F3ED7E0055F1A2 /* MainTabBarViewController */ = {
+			isa = PBXGroup;
+			children = (
+				950DAC9F28D997A500AC27DA /* MainTabBarViewController.xib */,
+				950DAC9E28D997A500AC27DA /* MainTabBarViewController.swift */,
+			);
+			path = MainTabBarViewController;
 			sourceTree = "<group>";
 		};
 		9534AA5828DEED740065FDD5 /* SearchMusicCell */ = {
@@ -353,13 +385,13 @@
 			path = "MusicSNSApp-MVVMTests";
 			sourceTree = "<group>";
 		};
-		95EC073628EEA052000AD0D5 /* PostMusic */ = {
+		95EC073628EEA052000AD0D5 /* PostMusicViewController */ = {
 			isa = PBXGroup;
 			children = (
 				95EC073228EE9998000AD0D5 /* PostMusicViewController.swift */,
 				95EC073328EE9998000AD0D5 /* PostMusicViewController.xib */,
 			);
-			path = PostMusic;
+			path = PostMusicViewController;
 			sourceTree = "<group>";
 		};
 		95F64BD028F03524001FC2D1 /* Extension */ = {
