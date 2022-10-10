@@ -20,6 +20,7 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet private weak var trackNameLabel: UILabel!
     @IBOutlet private weak var commentTextView: UITextView!
     @IBOutlet private weak var artistNameLabel: UILabel!
+    @IBOutlet private weak var likeCountLabel: UILabel!
 
     static let identifier = "PostTableViewCell"
     static let nibName = "PostTableViewCell"

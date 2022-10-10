@@ -34,7 +34,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AlI-VL-beB">
-                        <rect key="frame" x="345" y="433" width="49" height="31"/>
+                        <rect key="frame" x="351" y="433" width="49" height="31"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" image="bubble.right" catalog="system" title=""/>
@@ -62,11 +62,18 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lBv-qv-7es">
-                        <rect key="frame" x="291" y="433" width="46" height="31"/>
+                        <rect key="frame" x="230" y="433" width="46" height="31"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system" title=""/>
                     </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="likeCount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9r5-Mf-RZT">
+                        <rect key="frame" x="271" y="438" width="72" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -75,6 +82,7 @@
                 <outlet property="commentButton" destination="AlI-VL-beB" id="0lT-Zt-1fW"/>
                 <outlet property="commentTextView" destination="YkX-EC-W8r" id="goK-gK-fRd"/>
                 <outlet property="likeButton" destination="lBv-qv-7es" id="Pt8-Jd-1Pu"/>
+                <outlet property="likeCountLabel" destination="9r5-Mf-RZT" id="uP7-Fy-2i0"/>
                 <outlet property="postImageView" destination="fZM-AS-544" id="I7l-XJ-qsm"/>
                 <outlet property="trackNameLabel" destination="Dkg-BN-fV4" id="wDu-9H-FPZ"/>
                 <outlet property="userImageView" destination="VoK-OO-lpx" id="7gH-Fj-fZP"/>
