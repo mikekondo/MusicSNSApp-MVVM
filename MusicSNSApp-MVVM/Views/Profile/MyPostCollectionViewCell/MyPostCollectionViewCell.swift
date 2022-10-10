@@ -6,19 +6,20 @@
 //
 
 import UIKit
+import SDWebImage
 
 class MyPostCollectionViewCell: UICollectionViewCell {
+    // MARK: - UI Parts
+    @IBOutlet weak var artworkImageView: UIImageView!
 
     static let identifier = "MyPostCollectionViewCell"
     static let nibName = "MyPostCollectionViewCell"
-
-    @IBOutlet weak var trackNameLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
     }
 
     func configure(post: Post) {
-        trackNameLabel.text = post.trackName
+        artworkImageView.sd_setImage(with: URL(string: post.artworkUrl))
     }
 }

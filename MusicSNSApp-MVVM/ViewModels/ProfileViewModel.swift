@@ -18,7 +18,8 @@ protocol ProfileViewModelInputs {
 
 // MARK: - Outputs
 protocol ProfileViewModelOutputs {
-    var fetchMyPostPublishSubject: PublishSubject<[Post]> { get }
+    // NOTE: PublishSubjectだとCollectionViewが表示されない
+    var fetchMyPostPublishSubject: BehaviorSubject<[Post]> { get }
 }
 
 // MARK: - Type
@@ -30,15 +31,17 @@ protocol ProfileViewModelType {
 class ProfileViewModel: ProfileViewModelInputs,ProfileViewModelOutputs{
 
     // MARK: - Outputs
-    var fetchMyPostPublishSubject = RxSwift.PublishSubject<[Post]>()
+    var fetchMyPostPublishSubject = BehaviorSubject<[Post]>(value: [])
 
     // MARK: - Model Connect
     let loadPost = LoadPost()
 
+    // MARK: - Initializer
     init() {
         setupBindings()
     }
 
+    // MARK: - Functions
     private func setupBindings() {
         loadPost.fetchMyPostsFromFirestore { posts, error in
             if let error = error {
