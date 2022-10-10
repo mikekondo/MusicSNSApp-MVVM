@@ -51,6 +51,6 @@ extension ProfileViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
             let width = collectionView.bounds.width
             let cellWidth = (width - 30) / 3 // compute your cell width
-            return CGSize(width: cellWidth, height: cellWidth / 0.6)
+            return CGSize(width: cellWidth, height: cellWidth)
     }
 }

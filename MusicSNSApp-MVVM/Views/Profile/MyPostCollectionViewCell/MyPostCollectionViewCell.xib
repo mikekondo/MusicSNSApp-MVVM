@@ -17,13 +17,18 @@
                 <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wJR-kn-4NX">
-                        <rect key="frame" x="0.0" y="2" width="130" height="128"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wJR-kn-4NX">
+                        <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
                     </imageView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="wJR-kn-4NX" secondAttribute="bottom" id="2QQ-Jd-JuO"/>
+                <constraint firstAttribute="trailing" secondItem="wJR-kn-4NX" secondAttribute="trailing" id="JP0-bM-ZSD"/>
+                <constraint firstItem="wJR-kn-4NX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Wdc-aF-Y5x"/>
+                <constraint firstItem="wJR-kn-4NX" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="xDj-tH-hAI"/>
+            </constraints>
             <size key="customSize" width="198" height="189"/>
             <connections>
                 <outlet property="artworkImageView" destination="wJR-kn-4NX" id="7cm-MK-fxJ"/>
