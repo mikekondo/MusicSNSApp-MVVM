@@ -14,9 +14,9 @@ class PostsListViewController: UIViewController {
     // MARK: - UI Parts
     @IBOutlet weak var tableView: UITableView!
 
-    let postListViewModel = PostListViewModel()
-
+    private let postListViewModel = PostListViewModel()
     private let disposeBag = DisposeBag()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupBindings()
