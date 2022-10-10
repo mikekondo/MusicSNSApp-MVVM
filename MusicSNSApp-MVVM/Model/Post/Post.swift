@@ -15,6 +15,7 @@ struct Post {
     let postComment: String
     let createdAt: Timestamp
     let uid: String
+    let likeCount: Int
     let userName: String
     init(dic: [String: Any]) {
         self.artistName = dic["artistName"] as? String ?? ""
@@ -24,5 +25,6 @@ struct Post {
         self.createdAt = dic["createdAt"] as? Timestamp ?? Timestamp()
         self.uid = dic["uid"] as? String ?? ""
         self.userName = dic["userName"] as? String ?? ""
+        self.likeCount = dic["likeCount"] as? Int ?? Int()
     }
 }

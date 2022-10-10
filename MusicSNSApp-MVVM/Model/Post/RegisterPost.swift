@@ -24,6 +24,7 @@ class RegisterPost {
                         "artworkUrl": selectedMusic.artworkUrl100,
                         "postComment": postComment,
                         "userName": userName,
+                        "likeCount": 0,
                         "uid": uid,"createdAt": Timestamp()] as [String : Any]
         try await Firestore.firestore().collection("Posts").document().setData(document)
     }
