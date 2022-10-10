@@ -20,9 +20,26 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet private weak var trackNameLabel: UILabel!
     @IBOutlet private weak var commentTextView: UITextView!
     @IBOutlet private weak var artistNameLabel: UILabel!
+    @IBOutlet private weak var likeCountLabel: UILabel!
 
     static let identifier = "PostTableViewCell"
     static let nibName = "PostTableViewCell"
+
+    private lazy var postListViewModel = PostListViewModel(likeButtonTapObservable: likeButton.rx.tap.asObservable())
+    private let disposeBag = DisposeBag()
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setupBindings()
+    }
+
+    private func setupBindings() {
+        // TODO: LikeButton押されたらLikeButtonのImageを変更する
+
+        commentButton.rx.tap.subscribe (onNext: {
+            // TODO: コメント画面に遷移
+        }).disposed(by: disposeBag)
+    }
 
     func configure(post: Post) {
         userImageView.circle()
