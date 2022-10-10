@@ -1,8 +1,8 @@
 //
-//  ViewController.swift
+//  MainTabViewController.swift
 //  MusicSNSApp-MVVM
 //
-//  Created by 近藤米功 on 2022/09/20.
+//  Created by 近藤米功 on 2022/10/10.
 //
 
 import UIKit

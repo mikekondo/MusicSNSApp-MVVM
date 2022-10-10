@@ -21,14 +21,14 @@
 		950DAC9128D9917800AC27DA /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 950DAC9028D9917800AC27DA /* SDWebImage */; };
 		950DAC9428D991AA00AC27DA /* PKHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 950DAC9328D991AA00AC27DA /* PKHUD */; };
 		950DAC9D28D993B000AC27DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 950DAC9C28D993B000AC27DA /* GoogleService-Info.plist */; };
-		950DACA028D997A500AC27DA /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950DAC9E28D997A500AC27DA /* MainTabBarViewController.swift */; };
-		950DACA128D997A500AC27DA /* MainTabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 950DAC9F28D997A500AC27DA /* MainTabBarViewController.xib */; };
 		950DACA828D9995A00AC27DA /* SearchMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950DACA628D9995A00AC27DA /* SearchMusicViewController.swift */; };
 		950DACA928D9995A00AC27DA /* SearchMusicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 950DACA728D9995A00AC27DA /* SearchMusicViewController.xib */; };
 		950DACAE28D9999B00AC27DA /* PostsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950DACAC28D9999B00AC27DA /* PostsListViewController.swift */; };
 		950DACAF28D9999B00AC27DA /* PostsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 950DACAD28D9999B00AC27DA /* PostsListViewController.xib */; };
 		950DACB228D999EC00AC27DA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950DACB028D999EC00AC27DA /* ProfileViewController.swift */; };
 		950DACB328D999EC00AC27DA /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 950DACB128D999EC00AC27DA /* ProfileViewController.xib */; };
+		9512207E28F4121B0022DB6D /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9512207C28F4121B0022DB6D /* MainTabViewController.swift */; };
+		9512207F28F4121B0022DB6D /* MainTabViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9512207D28F4121B0022DB6D /* MainTabViewController.xib */; };
 		951E36AB28F3A9FA0055F1A2 /* MyPostCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951E36AA28F3A9FA0055F1A2 /* MyPostCollectionViewDataSource.swift */; };
 		951E36BF28F3D8990055F1A2 /* MyPostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951E36BD28F3D8990055F1A2 /* MyPostCollectionViewCell.swift */; };
 		951E36C028F3D8990055F1A2 /* MyPostCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 951E36BE28F3D8990055F1A2 /* MyPostCollectionViewCell.xib */; };
@@ -85,14 +85,14 @@
 		950DAC7E28D9909700AC27DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		950DAC8028D9909700AC27DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		950DAC9C28D993B000AC27DA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		950DAC9E28D997A500AC27DA /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
-		950DAC9F28D997A500AC27DA /* MainTabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainTabBarViewController.xib; path = "MusicSNSApp-MVVM/Views/MainTabBar/MainTabBarViewController.xib"; sourceTree = SOURCE_ROOT; };
 		950DACA628D9995A00AC27DA /* SearchMusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMusicViewController.swift; sourceTree = "<group>"; };
 		950DACA728D9995A00AC27DA /* SearchMusicViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchMusicViewController.xib; sourceTree = "<group>"; };
 		950DACAC28D9999B00AC27DA /* PostsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsListViewController.swift; sourceTree = "<group>"; };
 		950DACAD28D9999B00AC27DA /* PostsListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostsListViewController.xib; sourceTree = "<group>"; };
 		950DACB028D999EC00AC27DA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		950DACB128D999EC00AC27DA /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		9512207C28F4121B0022DB6D /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
+		9512207D28F4121B0022DB6D /* MainTabViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTabViewController.xib; sourceTree = "<group>"; };
 		951E36AA28F3A9FA0055F1A2 /* MyPostCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPostCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		951E36BD28F3D8990055F1A2 /* MyPostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPostCollectionViewCell.swift; sourceTree = "<group>"; };
 		951E36BE28F3D8990055F1A2 /* MyPostCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyPostCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -335,8 +335,8 @@
 		951E36C928F3ED7E0055F1A2 /* MainTabBarViewController */ = {
 			isa = PBXGroup;
 			children = (
-				950DAC9F28D997A500AC27DA /* MainTabBarViewController.xib */,
-				950DAC9E28D997A500AC27DA /* MainTabBarViewController.swift */,
+				9512207C28F4121B0022DB6D /* MainTabViewController.swift */,
+				9512207D28F4121B0022DB6D /* MainTabViewController.xib */,
 			);
 			path = MainTabBarViewController;
 			sourceTree = "<group>";
@@ -533,6 +533,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9512207F28F4121B0022DB6D /* MainTabViewController.xib in Resources */,
 				9534AA6228DEF3070065FDD5 /* LoginViewController.xib in Resources */,
 				950DACB328D999EC00AC27DA /* ProfileViewController.xib in Resources */,
 				950DACAF28D9999B00AC27DA /* PostsListViewController.xib in Resources */,
@@ -541,7 +542,6 @@
 				9534AA5D28DEED9D0065FDD5 /* PostTableViewCell.xib in Resources */,
 				9534AA5728DEED6D0065FDD5 /* MusicTableViewCell.xib in Resources */,
 				950DAC9D28D993B000AC27DA /* GoogleService-Info.plist in Resources */,
-				950DACA128D997A500AC27DA /* MainTabBarViewController.xib in Resources */,
 				950DAC7C28D9909700AC27DA /* Assets.xcassets in Resources */,
 				95EC073528EE9998000AD0D5 /* PostMusicViewController.xib in Resources */,
 				950DACA928D9995A00AC27DA /* SearchMusicViewController.xib in Resources */,
@@ -574,6 +574,7 @@
 				951E36BF28F3D8990055F1A2 /* MyPostCollectionViewCell.swift in Sources */,
 				951E36C228F3DCB50055F1A2 /* ProfileViewModel.swift in Sources */,
 				9534AA6128DEF3070065FDD5 /* LoginViewController.swift in Sources */,
+				9512207E28F4121B0022DB6D /* MainTabViewController.swift in Sources */,
 				959FCB2C28EEA54D00B15130 /* PostMusicViewModel.swift in Sources */,
 				95B5F8D828EFE5F600F0C0E2 /* PostTableViewDataSource.swift in Sources */,
 				9598109028E027560073A7AF /* RegisterUser.swift in Sources */,
@@ -582,7 +583,6 @@
 				950DACA828D9995A00AC27DA /* SearchMusicViewController.swift in Sources */,
 				950DACAE28D9999B00AC27DA /* PostsListViewController.swift in Sources */,
 				9534AA5C28DEED9D0065FDD5 /* PostTableViewCell.swift in Sources */,
-				950DACA028D997A500AC27DA /* MainTabBarViewController.swift in Sources */,
 				9534AA5628DEED6D0065FDD5 /* MusicTableViewCell.swift in Sources */,
 				95F64BD228F03535001FC2D1 /* UIImageView-Extension.swift in Sources */,
 				950DAC7328D9909600AC27DA /* AppDelegate.swift in Sources */,
