@@ -21,8 +21,6 @@ final class PostTableViewDataSource: NSObject, UITableViewDataSource, RxTableVie
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: PostTableViewCell.identifier,for: indexPath) as? PostTableViewCell else { fatalError("The dequeued cell is not instance")}
-
-        // TODO: ユーザ名を取得、写真を取得
         cell.configure(post: posts[indexPath.row])
         return cell
     }

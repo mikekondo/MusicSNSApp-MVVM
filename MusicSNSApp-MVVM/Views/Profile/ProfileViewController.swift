@@ -16,11 +16,17 @@ class ProfileViewController: UIViewController {
     @IBOutlet private weak var profileImageView: UIImageView!
     @IBOutlet private weak var userNameLabel: UILabel!
 
+    // MARK: - View Model Connect
+    private let profileViewModel = ProfileViewModel()
+
+    private let disposeBag = DisposeBag()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Profile"
         setupView()
         setupBindings()
+        setupCollectionView()
     }
 
     // MARK: - Functions
@@ -31,7 +37,7 @@ class ProfileViewController: UIViewController {
     }
     private func setupBindings() {
         let dataSource = MyPostCollectionViewDataSource()
-        // TODO: Bind
+        profileViewModel.fetchMyPostPublishSubject.bind(to: collectionView.rx.items(dataSource: dataSource)).disposed(by: disposeBag)
     }
     private func setupCollectionView() {
         collectionView.delegate = self

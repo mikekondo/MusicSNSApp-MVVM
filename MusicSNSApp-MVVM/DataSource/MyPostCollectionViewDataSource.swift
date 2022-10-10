@@ -22,7 +22,8 @@ final class MyPostCollectionViewDataSource: NSObject, UICollectionViewDataSource
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyPostCollectionViewCell.identifier, for: indexPath) as? MyPostCollectionViewCell else {
             fatalError("The dequeued cell is not instance")
         }
-        // TODO: Configure書く
+        cell.configure(post: myPostArray[indexPath.row])
+        print("mypostArrayのカウント",myPostArray.count)
         return cell
     }
 

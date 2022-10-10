@@ -18,4 +18,7 @@ class MyPostCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
     }
 
+    func configure(post: Post) {
+        trackNameLabel.text = post.trackName
+    }
 }
