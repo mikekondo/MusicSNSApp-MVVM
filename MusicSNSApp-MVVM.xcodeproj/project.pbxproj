@@ -30,8 +30,9 @@
 		950DACB228D999EC00AC27DA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950DACB028D999EC00AC27DA /* ProfileViewController.swift */; };
 		950DACB328D999EC00AC27DA /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 950DACB128D999EC00AC27DA /* ProfileViewController.xib */; };
 		951E36AB28F3A9FA0055F1A2 /* MyPostCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951E36AA28F3A9FA0055F1A2 /* MyPostCollectionViewDataSource.swift */; };
-		951E36AF28F3AB370055F1A2 /* MyPostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951E36AD28F3AB370055F1A2 /* MyPostCollectionViewCell.swift */; };
-		951E36B028F3AB370055F1A2 /* MyPostCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 951E36AE28F3AB370055F1A2 /* MyPostCollectionViewCell.xib */; };
+		951E36BF28F3D8990055F1A2 /* MyPostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951E36BD28F3D8990055F1A2 /* MyPostCollectionViewCell.swift */; };
+		951E36C028F3D8990055F1A2 /* MyPostCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 951E36BE28F3D8990055F1A2 /* MyPostCollectionViewCell.xib */; };
+		951E36C228F3DCB50055F1A2 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951E36C128F3DCB50055F1A2 /* ProfileViewModel.swift */; };
 		9534AA5628DEED6D0065FDD5 /* MusicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9534AA5428DEED6D0065FDD5 /* MusicTableViewCell.swift */; };
 		9534AA5728DEED6D0065FDD5 /* MusicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9534AA5528DEED6D0065FDD5 /* MusicTableViewCell.xib */; };
 		9534AA5C28DEED9D0065FDD5 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9534AA5A28DEED9D0065FDD5 /* PostTableViewCell.swift */; };
@@ -93,8 +94,9 @@
 		950DACB028D999EC00AC27DA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		950DACB128D999EC00AC27DA /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		951E36AA28F3A9FA0055F1A2 /* MyPostCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPostCollectionViewDataSource.swift; sourceTree = "<group>"; };
-		951E36AD28F3AB370055F1A2 /* MyPostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPostCollectionViewCell.swift; sourceTree = "<group>"; };
-		951E36AE28F3AB370055F1A2 /* MyPostCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyPostCollectionViewCell.xib; sourceTree = "<group>"; };
+		951E36BD28F3D8990055F1A2 /* MyPostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPostCollectionViewCell.swift; sourceTree = "<group>"; };
+		951E36BE28F3D8990055F1A2 /* MyPostCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyPostCollectionViewCell.xib; sourceTree = "<group>"; };
+		951E36C128F3DCB50055F1A2 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		9534AA5428DEED6D0065FDD5 /* MusicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTableViewCell.swift; sourceTree = "<group>"; };
 		9534AA5528DEED6D0065FDD5 /* MusicTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicTableViewCell.xib; sourceTree = "<group>"; };
 		9534AA5A28DEED9D0065FDD5 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				95FEDA8728E3CBA100178CDE /* SearchMusicViewModel.swift */,
 				959FCB2B28EEA54D00B15130 /* PostMusicViewModel.swift */,
 				95B5F8D928EFEC3C00F0C0E2 /* PostListViewModel.swift */,
+				951E36C128F3DCB50055F1A2 /* ProfileViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -276,8 +279,8 @@
 		951E36AC28F3AB010055F1A2 /* MyPostCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				951E36AD28F3AB370055F1A2 /* MyPostCollectionViewCell.swift */,
-				951E36AE28F3AB370055F1A2 /* MyPostCollectionViewCell.xib */,
+				951E36BD28F3D8990055F1A2 /* MyPostCollectionViewCell.swift */,
+				951E36BE28F3D8990055F1A2 /* MyPostCollectionViewCell.xib */,
 			);
 			path = MyPostCollectionViewCell;
 			sourceTree = "<group>";
@@ -478,7 +481,7 @@
 				950DACB328D999EC00AC27DA /* ProfileViewController.xib in Resources */,
 				950DACAF28D9999B00AC27DA /* PostsListViewController.xib in Resources */,
 				950DAC7F28D9909700AC27DA /* LaunchScreen.storyboard in Resources */,
-				951E36B028F3AB370055F1A2 /* MyPostCollectionViewCell.xib in Resources */,
+				951E36C028F3D8990055F1A2 /* MyPostCollectionViewCell.xib in Resources */,
 				9534AA5D28DEED9D0065FDD5 /* PostTableViewCell.xib in Resources */,
 				9534AA5728DEED6D0065FDD5 /* MusicTableViewCell.xib in Resources */,
 				950DAC9D28D993B000AC27DA /* GoogleService-Info.plist in Resources */,
@@ -512,7 +515,8 @@
 			files = (
 				95FEDA8828E3CBA100178CDE /* SearchMusicViewModel.swift in Sources */,
 				959FCB3028EECBE800B15130 /* RegisterPost.swift in Sources */,
-				951E36AF28F3AB370055F1A2 /* MyPostCollectionViewCell.swift in Sources */,
+				951E36BF28F3D8990055F1A2 /* MyPostCollectionViewCell.swift in Sources */,
+				951E36C228F3DCB50055F1A2 /* ProfileViewModel.swift in Sources */,
 				9534AA6128DEF3070065FDD5 /* LoginViewController.swift in Sources */,
 				959FCB2C28EEA54D00B15130 /* PostMusicViewModel.swift in Sources */,
 				95B5F8D828EFE5F600F0C0E2 /* PostTableViewDataSource.swift in Sources */,
