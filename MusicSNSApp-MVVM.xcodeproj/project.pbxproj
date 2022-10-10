@@ -225,13 +225,9 @@
 		950DACA428D998EB00AC27DA /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9534AA6328DFEFE60065FDD5 /* User.swift */,
-				9598108F28E027560073A7AF /* RegisterUser.swift */,
-				95FEDA8528E2D0C500178CDE /* Music.swift */,
-				959FCB2D28EEACB500B15130 /* Post.swift */,
-				959FCB2F28EECBE800B15130 /* RegisterPost.swift */,
-				95B5F8DB28EFEEAA00F0C0E2 /* LoadPost.swift */,
-				95F64BCE28F02DA9001FC2D1 /* LoadUser.swift */,
+				951E36C428F3ECD60055F1A2 /* Music */,
+				951E36C328F3ECC40055F1A2 /* User */,
+				951E36C528F3ECDF0055F1A2 /* Post */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -283,6 +279,34 @@
 				951E36BE28F3D8990055F1A2 /* MyPostCollectionViewCell.xib */,
 			);
 			path = MyPostCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		951E36C328F3ECC40055F1A2 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				9534AA6328DFEFE60065FDD5 /* User.swift */,
+				9598108F28E027560073A7AF /* RegisterUser.swift */,
+				95F64BCE28F02DA9001FC2D1 /* LoadUser.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		951E36C428F3ECD60055F1A2 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				95FEDA8528E2D0C500178CDE /* Music.swift */,
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
+		951E36C528F3ECDF0055F1A2 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				959FCB2D28EEACB500B15130 /* Post.swift */,
+				959FCB2F28EECBE800B15130 /* RegisterPost.swift */,
+				95B5F8DB28EFEEAA00F0C0E2 /* LoadPost.swift */,
+			);
+			path = Post;
 			sourceTree = "<group>";
 		};
 		9534AA5828DEED740065FDD5 /* SearchMusicCell */ = {
