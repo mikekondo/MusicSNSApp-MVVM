@@ -41,7 +41,8 @@ class LoadPost {
             guard let snapShots = snapShots else { return }
             snapShots.documents.forEach ({ snapShot in
                 let data = snapShot.data()
-                let post = Post(dic: data)
+                var post = Post(dic: data)
+                post.docId = snapShot.documentID
                 posts.append(post)
             })
             completion(posts,nil)
