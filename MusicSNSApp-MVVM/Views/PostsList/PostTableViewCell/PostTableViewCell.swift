@@ -8,6 +8,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import FirebaseAuth
 import SDWebImage
 
 class PostTableViewCell: UITableViewCell {
@@ -66,7 +67,18 @@ class PostTableViewCell: UITableViewCell {
         likeButton.tag = index
         commentButton.tag = index
         userImageView.image = UIImage(named: "gohan")
+        likeCountLabel.text = "\(post.likeCount)いいね"
 
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        if let likeFlag = post.likeFlagDic[uid]{
+            if likeFlag == true {
+                likeButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+            }else{
+                likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
+            }
+        }else{
+            likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
+        }
     }
     
 }

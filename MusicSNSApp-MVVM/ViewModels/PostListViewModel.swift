@@ -61,12 +61,12 @@ class PostListViewModel: PostListViewModelOutputs, PostListViewModelInputs {
     }
 
     private func setupBindings() {
+        
         likeButtonTapObservable?.subscribe(onNext: {
             guard let tagNumber = self.tagNumber else { return }
-            print("tagNumber",tagNumber)
             self.likeFlag.toggle()
             self.likeFlagBehaviorRelay.accept(self.likeFlag)
-            // TODO: Firestoreといいね機能の連携
+            // Firestoreといいね機能の連携
             Task{
                 do{
                     try await self.registerPost.updatePostLikeToFirestore(post: self.posts[tagNumber])

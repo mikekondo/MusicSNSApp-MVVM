@@ -30,31 +30,19 @@ class RegisterPost {
         try await Firestore.firestore().collection("Posts").document().setData(document)
     }
 
-    // いいねの更新情報をFirestore
+    // いいねの更新情報をFirestoreに送信
     func updatePostLikeToFirestore(post: Post) async throws {
-        guard let docId = post.docId else {
-            print("docIDがありません")
-            return
-        }
+        guard let docId = post.docId else { return }
         let selectedPostDB = db.collection("Posts").document(docId)
 
-        guard let uid = Auth.auth().currentUser?.uid else {
-            print("uidがありません")
-            return
-        }
-        guard let data = try await selectedPostDB.getDocument().data() else {
-            print("dataがありません")
-            return
-
-        }
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        guard let data = try await selectedPostDB.getDocument().data() else { return }
 
         var likeCount = 0
-
         let post = Post(dic: data)
         
         // LikeFlagがあればその中身をtoggleしていいね数を更新
         if let likeFlag = post.likeFlagDic[uid] {
-            print("1")
             if likeFlag == true {
                 likeCount = post.likeCount - 1
                 try await selectedPostDB.setData(["likeFlagDic": [uid: false]],merge: true)
@@ -63,14 +51,11 @@ class RegisterPost {
                 try await selectedPostDB.setData(["likeFlagDic": [uid: true]],merge: true)
             }
         }else {
-            print("2")
             // LikeFlagがなければlikeFlagをmergeしていいね数を＋1にする
             likeCount = post.likeCount + 1
             try await selectedPostDB.setData(["likeFlagDic": [uid: true]],merge: true)
         }
         // likeCount情報をFirestoreに送信
         try await selectedPostDB.updateData(["likeCount": likeCount])
-
     }
-
 }
