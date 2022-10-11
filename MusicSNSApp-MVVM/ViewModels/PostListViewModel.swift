@@ -13,7 +13,7 @@ import RxRelay
 // MARK: - Inputs（initが複数あるので?をつけている）
 protocol PostListViewModelInputs {
     var likeButtonTapObservable: Observable<Void>? { get }
-    var likeButtonTagAnyObserver: AnyObserver<Int>? { get }
+    var tagNumber: Int? { get }
 }
 
 // MARK: - Outputs
@@ -30,10 +30,9 @@ protocol PostListViewModelType {
 
 class PostListViewModel: PostListViewModelOutputs, PostListViewModelInputs {
 
-
     // MARK: - Inputs
     var likeButtonTapObservable: RxSwift.Observable<Void>?
-    var likeButtonTagAnyObserver: RxSwift.AnyObserver<Int>?
+    var tagNumber: Int?
 
     // MARK: - Outputs
     var fetchPostPublishSubject =  RxSwift.PublishSubject<[Post]>()
@@ -52,16 +51,18 @@ class PostListViewModel: PostListViewModelOutputs, PostListViewModelInputs {
     }
 
     // MARK: PostTableViewCell用のInitializer
-    init(likeButtonTapObservable: Observable<Void>,likeButtonTagAnyObserver: AnyObserver<Int>) {
+    init(likeButtonTapObservable: Observable<Void>) {
         self.likeButtonTapObservable = likeButtonTapObservable
-        self.likeButtonTagAnyObserver = likeButtonTagAnyObserver
         setupBindings()
     }
 
     private func setupBindings() {
         likeButtonTapObservable?.subscribe(onNext: {
+            guard let tagNumber = self.tagNumber else { return }
+            print("tagNumber",tagNumber)
             self.likeFlag.toggle()
             self.likeFlagBehaviorRelay.accept(self.likeFlag)
+            // TODO: Firestoreといいね機能の連携
         }).disposed(by: disposeBag)
 
         loadPost.fetchPostsFromFirestore { posts, error in
