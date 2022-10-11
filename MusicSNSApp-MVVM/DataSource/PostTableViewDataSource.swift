@@ -21,7 +21,7 @@ final class PostTableViewDataSource: NSObject, UITableViewDataSource, RxTableVie
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: PostTableViewCell.identifier,for: indexPath) as? PostTableViewCell else { fatalError("The dequeued cell is not instance")}
-        cell.configure(post: posts[indexPath.row])
+        cell.configure(post: posts[indexPath.row], index: indexPath.row)
         return cell
     }
 

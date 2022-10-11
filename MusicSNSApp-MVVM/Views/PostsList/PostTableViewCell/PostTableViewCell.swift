@@ -25,7 +25,10 @@ class PostTableViewCell: UITableViewCell {
     static let identifier = "PostTableViewCell"
     static let nibName = "PostTableViewCell"
 
-    private lazy var postListViewModel = PostListViewModel(likeButtonTapObservable: likeButton.rx.tap.asObservable())
+    let heartFill = UIImage(systemName: "heart.fill")
+    let heart = UIImage(systemName: "heart")
+
+    private lazy var postListViewModel = PostListViewModel(likeButtonTapObservable: likeButton.rx.tap.asObservable(), likeButtonTagAnyObserver: likeButton.rx.tag.asObserver())
     private let disposeBag = DisposeBag()
 
     override func awakeFromNib() {
@@ -35,20 +38,29 @@ class PostTableViewCell: UITableViewCell {
 
     private func setupBindings() {
         // TODO: LikeButton押されたらLikeButtonのImageを変更する
-
+        postListViewModel.outputs.likeFlagBehaviorRelay.subscribe { likeFlag in
+            if likeFlag == true {
+                self.likeButton.setImage(self.heartFill, for: .normal)
+            }else{
+                self.likeButton.setImage(self.heart, for: .normal)
+            }
+        }
         commentButton.rx.tap.subscribe (onNext: {
             // TODO: コメント画面に遷移
         }).disposed(by: disposeBag)
     }
 
-    func configure(post: Post) {
+    func configure(post: Post,index: Int) {
         userImageView.circle()
         trackNameLabel.text = post.trackName
         artistNameLabel.text = post.artistName
         commentTextView.text = post.postComment
         postImageView.sd_setImage(with: URL(string: post.artworkUrl))
         userNameLabel.text = post.userName
+        likeButton.tag = index
+        commentButton.tag = index
         userImageView.image = UIImage(named: "gohan")
+
     }
     
 }

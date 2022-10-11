@@ -10,14 +10,16 @@ import RxSwift
 import RxCocoa
 import RxRelay
 
-// MARK: - Inputs（おそらくcellから受け取る）
+// MARK: - Inputs（initが複数あるので?をつけている）
 protocol PostListViewModelInputs {
     var likeButtonTapObservable: Observable<Void>? { get }
+    var likeButtonTagAnyObserver: AnyObserver<Int>? { get }
 }
 
 // MARK: - Outputs
 protocol PostListViewModelOutputs {
     var fetchPostPublishSubject: PublishSubject<[Post]> { get }
+    var likeFlagBehaviorRelay: BehaviorRelay<Bool> { get }
 }
 
 // MARK: - Type
@@ -27,28 +29,37 @@ protocol PostListViewModelType {
 }
 
 class PostListViewModel: PostListViewModelOutputs, PostListViewModelInputs {
+
+
     // MARK: - Inputs
     var likeButtonTapObservable: RxSwift.Observable<Void>?
+    var likeButtonTagAnyObserver: RxSwift.AnyObserver<Int>?
 
     // MARK: - Outputs
     var fetchPostPublishSubject =  RxSwift.PublishSubject<[Post]>()
+    var likeFlagBehaviorRelay = RxRelay.BehaviorRelay<Bool>(value: false)
 
     // MARK: - Model Connect
     private let loadPost = LoadPost()
 
     private let disposeBag = DisposeBag()
 
+    private var likeFlag = false
+
     init(){
         setupBindings()
     }
 
-    init(likeButtonTapObservable: Observable<Void>) {
+    init(likeButtonTapObservable: Observable<Void>,likeButtonTagAnyObserver: AnyObserver<Int>) {
         self.likeButtonTapObservable = likeButtonTapObservable
+        self.likeButtonTagAnyObserver = likeButtonTagAnyObserver
+        setupBindings()
     }
 
     private func setupBindings() {
         likeButtonTapObservable?.subscribe(onNext: {
-            print("likeButtonTap")
+            self.likeFlag.toggle()
+            self.likeFlagBehaviorRelay.accept(self.likeFlag)
         }).disposed(by: disposeBag)
 
         loadPost.fetchPostsFromFirestore { posts, error in
