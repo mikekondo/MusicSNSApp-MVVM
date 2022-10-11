@@ -17,7 +17,7 @@ struct Post {
     let uid: String
     let likeCount: Int
     let userName: String
-    let likeFlagDic: Dictionary<String,Any>
+    let likeFlagDic: Dictionary<String,Bool>
 
     var docId: String?
 
@@ -30,6 +30,6 @@ struct Post {
         self.uid = dic["uid"] as? String ?? ""
         self.userName = dic["userName"] as? String ?? ""
         self.likeCount = dic["likeCount"] as? Int ?? Int()
-        self.likeFlagDic = dic["likeFlagDic"] as? Dictionary<String,Any> ?? Dictionary()
+        self.likeFlagDic = dic["likeFlagDic"] as? Dictionary<String,Bool> ?? Dictionary()
     }
 }

@@ -39,11 +39,15 @@ class PostListViewModel: PostListViewModelOutputs, PostListViewModelInputs {
     var likeFlagBehaviorRelay = RxRelay.BehaviorRelay<Bool>(value: false)
 
     // MARK: - Model Connect
+    private let registerPost = RegisterPost()
     private let loadPost = LoadPost()
 
     private let disposeBag = DisposeBag()
 
+    // TODO: 起動時に最新データを反映させる
     private var likeFlag = false
+
+    private var posts = [Post]()
 
     // MARK: PostsListViewController用のInitializer
     init(){
@@ -63,6 +67,15 @@ class PostListViewModel: PostListViewModelOutputs, PostListViewModelInputs {
             self.likeFlag.toggle()
             self.likeFlagBehaviorRelay.accept(self.likeFlag)
             // TODO: Firestoreといいね機能の連携
+            Task{
+                do{
+                    try await self.registerPost.updatePostLikeToFirestore(post: self.posts[tagNumber])
+                    print("いいねに成功しました")
+                }
+                catch{
+                    print("いいねに失敗しました",error)
+                }
+            }
         }).disposed(by: disposeBag)
 
         loadPost.fetchPostsFromFirestore { posts, error in
@@ -71,6 +84,7 @@ class PostListViewModel: PostListViewModelOutputs, PostListViewModelInputs {
                 return
             }
             guard let posts = posts else { return }
+            self.posts = posts
             self.fetchPostPublishSubject.onNext(posts)
         }
     }
