@@ -46,10 +46,12 @@ class PostListViewModel: PostListViewModelOutputs, PostListViewModelInputs {
 
     private var likeFlag = false
 
+    // MARK: PostsListViewController用のInitializer
     init(){
         setupBindings()
     }
 
+    // MARK: PostTableViewCell用のInitializer
     init(likeButtonTapObservable: Observable<Void>,likeButtonTagAnyObserver: AnyObserver<Int>) {
         self.likeButtonTapObservable = likeButtonTapObservable
         self.likeButtonTagAnyObserver = likeButtonTagAnyObserver
