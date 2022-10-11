@@ -16,7 +16,7 @@
 - MVVM (Model View ViewModel)
 - Storyboardを使用せず、Xibを使用
 - チケット駆動開発
-- テスト駆動開発
+- mainブランチからIssuesに対応したdevelop/#~ブランチを切り、作業する
 
 ## コミットメッセージ
 - 追加 : `add ○○`
