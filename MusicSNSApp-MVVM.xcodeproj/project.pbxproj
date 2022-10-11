@@ -185,7 +185,7 @@
 			children = (
 				95F64BD028F03524001FC2D1 /* Extension */,
 				95FEDA8228E2CF9D00178CDE /* DataSource */,
-				950DACA428D998EB00AC27DA /* Model */,
+				950DACA428D998EB00AC27DA /* Models */,
 				950DACA328D998E600AC27DA /* Views */,
 				950DACA228D998DD00AC27DA /* ViewModels */,
 				950DAC7228D9909600AC27DA /* AppDelegate.swift */,
@@ -222,14 +222,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		950DACA428D998EB00AC27DA /* Model */ = {
+		950DACA428D998EB00AC27DA /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				951E36C428F3ECD60055F1A2 /* Music */,
 				951E36C328F3ECC40055F1A2 /* User */,
 				951E36C528F3ECDF0055F1A2 /* Post */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		950DACA528D998F700AC27DA /* MainTabBar */ = {

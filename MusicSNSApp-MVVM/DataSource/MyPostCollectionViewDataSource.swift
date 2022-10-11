@@ -23,7 +23,6 @@ final class MyPostCollectionViewDataSource: NSObject, UICollectionViewDataSource
             fatalError("The dequeued cell is not instance")
         }
         cell.configure(post: myPostArray[indexPath.row])
-        print("mypostArrayのカウント",myPostArray.count)
         return cell
     }
 

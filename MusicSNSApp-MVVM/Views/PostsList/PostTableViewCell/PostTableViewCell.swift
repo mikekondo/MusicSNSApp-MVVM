@@ -8,6 +8,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import FirebaseAuth
 import SDWebImage
 
 class PostTableViewCell: UITableViewCell {
@@ -28,7 +29,7 @@ class PostTableViewCell: UITableViewCell {
     let heartFill = UIImage(systemName: "heart.fill")
     let heart = UIImage(systemName: "heart")
 
-    private lazy var postListViewModel = PostListViewModel(likeButtonTapObservable: likeButton.rx.tap.asObservable(), likeButtonTagAnyObserver: likeButton.rx.tag.asObserver())
+    private lazy var postListViewModel = PostListViewModel(likeButtonTapObservable: likeButton.rx.tap.asObservable())
     private let disposeBag = DisposeBag()
 
     override func awakeFromNib() {
@@ -37,14 +38,20 @@ class PostTableViewCell: UITableViewCell {
     }
 
     private func setupBindings() {
+        // likeButtonのタグをViewModelのtag
+        likeButton.rx.tap.subscribe (onNext: {
+            self.postListViewModel.tagNumber = self.likeButton.tag
+        }).disposed(by: disposeBag)
+
         // TODO: LikeButton押されたらLikeButtonのImageを変更する
-        postListViewModel.outputs.likeFlagBehaviorRelay.subscribe { likeFlag in
+        postListViewModel.outputs.likeFlagBehaviorRelay.subscribe (onNext: { likeFlag in
             if likeFlag == true {
                 self.likeButton.setImage(self.heartFill, for: .normal)
             }else{
                 self.likeButton.setImage(self.heart, for: .normal)
             }
-        }
+        })
+
         commentButton.rx.tap.subscribe (onNext: {
             // TODO: コメント画面に遷移
         }).disposed(by: disposeBag)
@@ -60,7 +67,18 @@ class PostTableViewCell: UITableViewCell {
         likeButton.tag = index
         commentButton.tag = index
         userImageView.image = UIImage(named: "gohan")
+        likeCountLabel.text = "\(post.likeCount)いいね"
 
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        if let likeFlag = post.likeFlagDic[uid]{
+            if likeFlag == true {
+                likeButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+            }else{
+                likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
+            }
+        }else{
+            likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
+        }
     }
     
 }
