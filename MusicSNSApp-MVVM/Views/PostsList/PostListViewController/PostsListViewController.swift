@@ -33,5 +33,4 @@ class PostsListViewController: UIViewController {
         postListViewModel.outputs.fetchPostPublishSubject.bind(to: tableView.rx.items(dataSource: PostTableViewDataSource()))
             .disposed(by: disposeBag)
     }
-
 }

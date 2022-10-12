@@ -13,6 +13,7 @@ import RxRelay
 // MARK: - Inputs（initが複数あるので?をつけている）
 protocol PostListViewModelInputs {
     var likeButtonTapObservable: Observable<Void>? { get }
+    var commentButtonTapObservable: Observable<Void>? { get }
     var tagNumber: Int? { get }
 }
 
@@ -32,6 +33,7 @@ class PostListViewModel: PostListViewModelOutputs, PostListViewModelInputs {
 
     // MARK: - Inputs
     var likeButtonTapObservable: RxSwift.Observable<Void>?
+    var commentButtonTapObservable: RxSwift.Observable<Void>?
     var tagNumber: Int?
 
     // MARK: - Outputs
@@ -55,13 +57,25 @@ class PostListViewModel: PostListViewModelOutputs, PostListViewModelInputs {
     }
 
     // MARK: PostTableViewCell用のInitializer
-    init(likeButtonTapObservable: Observable<Void>) {
+    init(likeButtonTapObservable: Observable<Void>,commentButtonTapObservable: Observable<Void>) {
         self.likeButtonTapObservable = likeButtonTapObservable
-        setupBindings()
+        self.commentButtonTapObservable = commentButtonTapObservable
+        setupBindings2()
     }
 
     private func setupBindings() {
-        
+        loadPost.fetchPostsFromFirestore { posts, error in
+            if let error = error {
+                self.fetchPostPublishSubject.onError(error)
+                return
+            }
+            guard let posts = posts else { return }
+            self.posts = posts
+            self.fetchPostPublishSubject.onNext(posts)
+        }
+    }
+
+    private func setupBindings2() {
         likeButtonTapObservable?.subscribe(onNext: {
             guard let tagNumber = self.tagNumber else { return }
             self.likeFlag.toggle()
@@ -78,15 +92,8 @@ class PostListViewModel: PostListViewModelOutputs, PostListViewModelInputs {
             }
         }).disposed(by: disposeBag)
 
-        loadPost.fetchPostsFromFirestore { posts, error in
-            if let error = error {
-                self.fetchPostPublishSubject.onError(error)
-                return
-            }
-            guard let posts = posts else { return }
-            self.posts = posts
-            self.fetchPostPublishSubject.onNext(posts)
-        }
+        commentButtonTapObservable?.subscribe(onNext: {
+        }).disposed(by: disposeBag)
     }
 }
 

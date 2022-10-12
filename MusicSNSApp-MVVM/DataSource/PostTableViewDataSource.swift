@@ -11,7 +11,7 @@ import SDWebImage
 import UIKit
 
 final class PostTableViewDataSource: NSObject, UITableViewDataSource, RxTableViewDataSourceType {
-    
+
     typealias Element = [Post]
     var posts: [Post] = []
 

@@ -29,7 +29,7 @@ class PostTableViewCell: UITableViewCell {
     let heartFill = UIImage(systemName: "heart.fill")
     let heart = UIImage(systemName: "heart")
 
-    private lazy var postListViewModel = PostListViewModel(likeButtonTapObservable: likeButton.rx.tap.asObservable())
+    private lazy var postListViewModel = PostListViewModel(likeButtonTapObservable: likeButton.rx.tap.asObservable(), commentButtonTapObservable: commentButton.rx.tap.asObservable())
     private let disposeBag = DisposeBag()
 
     override func awakeFromNib() {
@@ -37,24 +37,21 @@ class PostTableViewCell: UITableViewCell {
         setupBindings()
     }
 
+    // MARK: - setupBindings
     private func setupBindings() {
         // likeButtonのタグをViewModelのtag
         likeButton.rx.tap.subscribe (onNext: {
             self.postListViewModel.tagNumber = self.likeButton.tag
         }).disposed(by: disposeBag)
 
-        // TODO: LikeButton押されたらLikeButtonのImageを変更する
-        postListViewModel.outputs.likeFlagBehaviorRelay.subscribe (onNext: { likeFlag in
+        // LikeButton押されたらLikeButtonのImageを変更する
+        postListViewModel.outputs.likeFlagBehaviorRelay.subscribe(onNext: { likeFlag in
             if likeFlag == true {
                 self.likeButton.setImage(self.heartFill, for: .normal)
             }else{
                 self.likeButton.setImage(self.heart, for: .normal)
             }
         })
-
-        commentButton.rx.tap.subscribe (onNext: {
-            // TODO: コメント画面に遷移
-        }).disposed(by: disposeBag)
     }
 
     func configure(post: Post,index: Int) {
