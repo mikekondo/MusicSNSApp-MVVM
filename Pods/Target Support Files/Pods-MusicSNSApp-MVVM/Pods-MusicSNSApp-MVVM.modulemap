@@ -1,0 +1,6 @@
+framework module Pods_MusicSNSApp_MVVM {
+  umbrella header "Pods-MusicSNSApp-MVVM-umbrella.h"
+
+  export *
+  module * { export * }
+}
