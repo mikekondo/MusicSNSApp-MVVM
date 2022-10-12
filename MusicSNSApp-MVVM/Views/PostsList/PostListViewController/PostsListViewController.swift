@@ -32,5 +32,11 @@ class PostsListViewController: UIViewController {
     private func setupBindings() {
         postListViewModel.outputs.fetchPostPublishSubject.bind(to: tableView.rx.items(dataSource: PostTableViewDataSource()))
             .disposed(by: disposeBag)
+
+        postListViewModel.outputs.commentButtonTapPublishSubject.subscribe (onNext: { [weak self] tagNumber in
+            print("タグ受け取り",tagNumber)
+            let commentListViewController = CommentListViewController()
+            self?.navigationController?.pushViewController(commentListViewController, animated: true)
+        }).disposed(by: disposeBag)
     }
 }

@@ -39,9 +39,14 @@ class PostTableViewCell: UITableViewCell {
 
     // MARK: - setupBindings
     private func setupBindings() {
-        // likeButtonのタグをViewModelのtag
+        // likeButtonのタグをViewModelのtagに設定
         likeButton.rx.tap.subscribe (onNext: {
             self.postListViewModel.tagNumber = self.likeButton.tag
+        }).disposed(by: disposeBag)
+
+        // CommentButtonのタグをViewModelのtagに設定
+        commentButton.rx.tap.subscribe (onNext: {
+            self.postListViewModel.tagNumber = self.commentButton.tag
         }).disposed(by: disposeBag)
 
         // LikeButton押されたらLikeButtonのImageを変更する
@@ -61,6 +66,7 @@ class PostTableViewCell: UITableViewCell {
         commentTextView.text = post.postComment
         postImageView.sd_setImage(with: URL(string: post.artworkUrl))
         userNameLabel.text = post.userName
+        // タグの設定
         likeButton.tag = index
         commentButton.tag = index
         userImageView.image = UIImage(named: "gohan")

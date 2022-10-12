@@ -21,7 +21,7 @@ protocol PostListViewModelInputs {
 protocol PostListViewModelOutputs {
     var fetchPostPublishSubject: PublishSubject<[Post]> { get }
     var likeFlagBehaviorRelay: BehaviorRelay<Bool> { get }
-    var commentButtonTapPublishRelay: PublishRelay<Int> { get }
+    var commentButtonTapPublishSubject: PublishSubject<Int> { get }
 }
 
 // MARK: - Type
@@ -40,7 +40,7 @@ class PostListViewModel: PostListViewModelOutputs, PostListViewModelInputs {
     // MARK: - Outputs
     var fetchPostPublishSubject =  RxSwift.PublishSubject<[Post]>()
     var likeFlagBehaviorRelay = RxRelay.BehaviorRelay<Bool>(value: false)
-    var commentButtonTapPublishRelay = RxRelay.PublishRelay<Int>()
+    var commentButtonTapPublishSubject = RxSwift.PublishSubject<Int>()
 
     // MARK: - Model Connect
     private let registerPost = RegisterPost()
@@ -62,10 +62,11 @@ class PostListViewModel: PostListViewModelOutputs, PostListViewModelInputs {
     init(likeButtonTapObservable: Observable<Void>,commentButtonTapObservable: Observable<Void>) {
         self.likeButtonTapObservable = likeButtonTapObservable
         self.commentButtonTapObservable = commentButtonTapObservable
-        setupBindings2()
+        setupBindings()
     }
 
     private func setupBindings() {
+
         loadPost.fetchPostsFromFirestore { posts, error in
             if let error = error {
                 self.fetchPostPublishSubject.onError(error)
@@ -75,9 +76,7 @@ class PostListViewModel: PostListViewModelOutputs, PostListViewModelInputs {
             self.posts = posts
             self.fetchPostPublishSubject.onNext(posts)
         }
-    }
 
-    private func setupBindings2() {
         likeButtonTapObservable?.subscribe(onNext: {
             guard let tagNumber = self.tagNumber else { return }
             self.likeFlag.toggle()
@@ -95,7 +94,9 @@ class PostListViewModel: PostListViewModelOutputs, PostListViewModelInputs {
         }).disposed(by: disposeBag)
 
         commentButtonTapObservable?.subscribe(onNext: {
-            
+            print("コメントボタンがタップされました")
+            guard let tagNumber = self.tagNumber else { return }
+            self.commentButtonTapPublishSubject.onNext(tagNumber)
         }).disposed(by: disposeBag)
     }
 }
