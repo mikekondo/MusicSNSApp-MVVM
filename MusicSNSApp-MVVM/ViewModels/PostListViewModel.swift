@@ -21,6 +21,7 @@ protocol PostListViewModelInputs {
 protocol PostListViewModelOutputs {
     var fetchPostPublishSubject: PublishSubject<[Post]> { get }
     var likeFlagBehaviorRelay: BehaviorRelay<Bool> { get }
+    var commentButtonTapPublishRelay: PublishRelay<Int> { get }
 }
 
 // MARK: - Type
@@ -39,6 +40,7 @@ class PostListViewModel: PostListViewModelOutputs, PostListViewModelInputs {
     // MARK: - Outputs
     var fetchPostPublishSubject =  RxSwift.PublishSubject<[Post]>()
     var likeFlagBehaviorRelay = RxRelay.BehaviorRelay<Bool>(value: false)
+    var commentButtonTapPublishRelay = RxRelay.PublishRelay<Int>()
 
     // MARK: - Model Connect
     private let registerPost = RegisterPost()
@@ -93,6 +95,7 @@ class PostListViewModel: PostListViewModelOutputs, PostListViewModelInputs {
         }).disposed(by: disposeBag)
 
         commentButtonTapObservable?.subscribe(onNext: {
+            
         }).disposed(by: disposeBag)
     }
 }
