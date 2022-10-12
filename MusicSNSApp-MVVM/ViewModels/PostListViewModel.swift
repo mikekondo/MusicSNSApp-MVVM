@@ -15,6 +15,7 @@ protocol PostListViewModelInputs {
     var likeButtonTapObservable: Observable<Void>? { get }
     var commentButtonTapObservable: Observable<Void>? { get }
     var tagNumber: Int? { get }
+    var dummyButtonTapObservable: Observable<Void>? { get }
 }
 
 // MARK: - Outputs
@@ -36,6 +37,7 @@ class PostListViewModel: PostListViewModelOutputs, PostListViewModelInputs {
     var likeButtonTapObservable: RxSwift.Observable<Void>?
     var commentButtonTapObservable: RxSwift.Observable<Void>?
     var tagNumber: Int?
+    var dummyButtonTapObservable: RxSwift.Observable<Void>?
 
     // MARK: - Outputs
     var fetchPostPublishSubject =  RxSwift.PublishSubject<[Post]>()
@@ -54,6 +56,11 @@ class PostListViewModel: PostListViewModelOutputs, PostListViewModelInputs {
     private var posts = [Post]()
 
     // MARK: PostsListViewController用のInitializer
+    init(dummyButtonTapObservable: Observable<Void>){
+        self.dummyButtonTapObservable = dummyButtonTapObservable
+        setupBindings()
+    }
+
     init(){
         setupBindings()
     }
@@ -96,7 +103,14 @@ class PostListViewModel: PostListViewModelOutputs, PostListViewModelInputs {
         commentButtonTapObservable?.subscribe(onNext: {
             print("コメントボタンがタップされました")
             guard let tagNumber = self.tagNumber else { return }
+            print("tagNumber",tagNumber)
             self.commentButtonTapPublishSubject.onNext(tagNumber)
+            print("onNext")
+        }).disposed(by: disposeBag)
+
+        dummyButtonTapObservable?.subscribe(onNext: {
+            print("dummyButtonOn")
+            self.commentButtonTapPublishSubject.onNext(1)
         }).disposed(by: disposeBag)
     }
 }

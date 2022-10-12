@@ -11,10 +11,13 @@ import RxCocoa
 
 class PostsListViewController: UIViewController {
 
+    @IBOutlet weak var dummyButton: UIButton!
     // MARK: - UI Parts
     @IBOutlet weak var tableView: UITableView!
 
-    private let postListViewModel = PostListViewModel()
+//    private lazy var postListViewModel = PostListViewModel(dummyButtonTapObservable: dummyButton.rx.tap.asObservable())
+
+    private lazy var postListViewModel = PostListViewModel()
     private let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
@@ -24,11 +27,13 @@ class PostsListViewController: UIViewController {
         navigationItem.title = "PostList"
     }
 
+    // MARK: - setupTableView
     private func setupTableView() {
         tableView.rowHeight = 550
         tableView.register(UINib(nibName: PostTableViewCell.nibName, bundle: nil), forCellReuseIdentifier: PostTableViewCell.identifier)
     }
 
+    // MARK: - setupBindings
     private func setupBindings() {
         postListViewModel.outputs.fetchPostPublishSubject.bind(to: tableView.rx.items(dataSource: PostTableViewDataSource()))
             .disposed(by: disposeBag)
