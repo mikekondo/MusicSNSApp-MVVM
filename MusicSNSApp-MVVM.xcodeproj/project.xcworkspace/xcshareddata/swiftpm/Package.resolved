@@ -109,15 +109,6 @@
       }
     },
     {
-      "identity" : "rxswift",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/ReactiveX/RxSwift",
-      "state" : {
-        "branch" : "main",
-        "revision" : "ab09f6966d5a14ffe6a7b960cc414ac85468b60b"
-      }
-    },
-    {
       "identity" : "sdwebimage",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/SDWebImage/SDWebImage",
