@@ -2,7 +2,7 @@
 楽曲写真とコメントを投稿し好きな音楽を共有するSNSアプリ（Insta風）
 
 ## 使用技術・ライブラリ
-- SwiftPackageManeger （ライブラリ管理）
+- SwiftPackageManeger, CocoaPods（RxSwiftのみ）
 - RxSwift
 - RxCocoa
 - RxRelay
