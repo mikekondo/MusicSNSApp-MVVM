@@ -52,6 +52,8 @@
 		95B5F8D828EFE5F600F0C0E2 /* PostTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B5F8D728EFE5F600F0C0E2 /* PostTableViewDataSource.swift */; };
 		95B5F8DA28EFEC3C00F0C0E2 /* PostListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B5F8D928EFEC3C00F0C0E2 /* PostListViewModel.swift */; };
 		95B5F8DC28EFEEAA00F0C0E2 /* LoadPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B5F8DB28EFEEAA00F0C0E2 /* LoadPost.swift */; };
+		95C92E0228FA4B43005F937E /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C92E0128FA4B43005F937E /* Tag.swift */; };
+		95C92E4028FA80D8005F937E /* Notification-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C92E3F28FA80D8005F937E /* Notification-Extension.swift */; };
 		95EC073428EE9998000AD0D5 /* PostMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EC073228EE9998000AD0D5 /* PostMusicViewController.swift */; };
 		95EC073528EE9998000AD0D5 /* PostMusicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95EC073328EE9998000AD0D5 /* PostMusicViewController.xib */; };
 		95F64BCF28F02DA9001FC2D1 /* LoadUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F64BCE28F02DA9001FC2D1 /* LoadUser.swift */; };
@@ -126,6 +128,8 @@
 		95B5F8D728EFE5F600F0C0E2 /* PostTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewDataSource.swift; sourceTree = "<group>"; };
 		95B5F8D928EFEC3C00F0C0E2 /* PostListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewModel.swift; sourceTree = "<group>"; };
 		95B5F8DB28EFEEAA00F0C0E2 /* LoadPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadPost.swift; sourceTree = "<group>"; };
+		95C92E0128FA4B43005F937E /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		95C92E3F28FA80D8005F937E /* Notification-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification-Extension.swift"; sourceTree = "<group>"; };
 		95EC073228EE9998000AD0D5 /* PostMusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostMusicViewController.swift; sourceTree = "<group>"; };
 		95EC073328EE9998000AD0D5 /* PostMusicViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostMusicViewController.xib; sourceTree = "<group>"; };
 		95F64BCE28F02DA9001FC2D1 /* LoadUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadUser.swift; sourceTree = "<group>"; };
@@ -256,6 +260,7 @@
 				951E36C428F3ECD60055F1A2 /* Music */,
 				951E36C328F3ECC40055F1A2 /* User */,
 				951E36C528F3ECDF0055F1A2 /* Post */,
+				95C92E0128FA4B43005F937E /* Tag.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -436,6 +441,7 @@
 			isa = PBXGroup;
 			children = (
 				95F64BD128F03535001FC2D1 /* UIImageView-Extension.swift */,
+				95C92E3F28FA80D8005F937E /* Notification-Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -758,6 +764,7 @@
 				95F64BD228F03535001FC2D1 /* UIImageView-Extension.swift in Sources */,
 				950DAC7328D9909600AC27DA /* AppDelegate.swift in Sources */,
 				95F64BCF28F02DA9001FC2D1 /* LoadUser.swift in Sources */,
+				95C92E4028FA80D8005F937E /* Notification-Extension.swift in Sources */,
 				9534AA6928DFF3140065FDD5 /* LoginViewModel.swift in Sources */,
 				95B5F8DA28EFEC3C00F0C0E2 /* PostListViewModel.swift in Sources */,
 				959409ED28F63F1E00BD8F66 /* CommentListViewController.swift in Sources */,
@@ -767,6 +774,7 @@
 				9534AA6428DFEFE60065FDD5 /* User.swift in Sources */,
 				959FCB2E28EEACB500B15130 /* Post.swift in Sources */,
 				95EC073428EE9998000AD0D5 /* PostMusicViewController.swift in Sources */,
+				95C92E0228FA4B43005F937E /* Tag.swift in Sources */,
 				950DAC7528D9909600AC27DA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
