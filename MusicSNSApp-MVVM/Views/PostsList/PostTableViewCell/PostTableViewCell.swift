@@ -56,7 +56,6 @@ class PostTableViewCell: UITableViewCell {
         }).disposed(by: disposeBag)
 
         postListViewModel.outputs.commentButtonTapPublishSubject.subscribe (onNext: { [weak self] tagNumber in
-            print("タグ受け取り",tagNumber)
             // MARK: - PostListViewControllerにイベント通知
             NotificationCenter.default.post(name: .getTag, object: nil,userInfo: ["tag": tagNumber])
         }).disposed(by: disposeBag)

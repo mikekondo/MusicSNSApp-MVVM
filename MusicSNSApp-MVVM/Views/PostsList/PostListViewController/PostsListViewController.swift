@@ -16,6 +16,8 @@ class PostsListViewController: UIViewController {
     // MARK: - View Model Connect
     private lazy var postListViewModel = PostListViewModel()
 
+    private var selectedPost: Post?
+
     private let disposeBag = DisposeBag()
 
     var postTableViewDataSource = PostTableViewDataSource()

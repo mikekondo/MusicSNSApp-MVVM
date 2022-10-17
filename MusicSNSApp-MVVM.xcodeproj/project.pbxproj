@@ -49,6 +49,7 @@
 		959FCB2C28EEA54D00B15130 /* PostMusicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959FCB2B28EEA54D00B15130 /* PostMusicViewModel.swift */; };
 		959FCB2E28EEACB500B15130 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959FCB2D28EEACB500B15130 /* Post.swift */; };
 		959FCB3028EECBE800B15130 /* RegisterPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959FCB2F28EECBE800B15130 /* RegisterPost.swift */; };
+		95AEB69228FD308700DA998E /* CommentListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AEB69128FD308700DA998E /* CommentListViewModel.swift */; };
 		95B5F8D828EFE5F600F0C0E2 /* PostTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B5F8D728EFE5F600F0C0E2 /* PostTableViewDataSource.swift */; };
 		95B5F8DA28EFEC3C00F0C0E2 /* PostListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B5F8D928EFEC3C00F0C0E2 /* PostListViewModel.swift */; };
 		95B5F8DC28EFEEAA00F0C0E2 /* LoadPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B5F8DB28EFEEAA00F0C0E2 /* LoadPost.swift */; };
@@ -125,6 +126,7 @@
 		959FCB2B28EEA54D00B15130 /* PostMusicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostMusicViewModel.swift; sourceTree = "<group>"; };
 		959FCB2D28EEACB500B15130 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		959FCB2F28EECBE800B15130 /* RegisterPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPost.swift; sourceTree = "<group>"; };
+		95AEB69128FD308700DA998E /* CommentListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListViewModel.swift; sourceTree = "<group>"; };
 		95B5F8D728EFE5F600F0C0E2 /* PostTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewDataSource.swift; sourceTree = "<group>"; };
 		95B5F8D928EFEC3C00F0C0E2 /* PostListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewModel.swift; sourceTree = "<group>"; };
 		95B5F8DB28EFEEAA00F0C0E2 /* LoadPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadPost.swift; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 				959FCB2B28EEA54D00B15130 /* PostMusicViewModel.swift */,
 				95B5F8D928EFEC3C00F0C0E2 /* PostListViewModel.swift */,
 				951E36C128F3DCB50055F1A2 /* ProfileViewModel.swift */,
+				95AEB69128FD308700DA998E /* CommentListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -751,6 +754,7 @@
 				951E36BF28F3D8990055F1A2 /* MyPostCollectionViewCell.swift in Sources */,
 				951E36C228F3DCB50055F1A2 /* ProfileViewModel.swift in Sources */,
 				9534AA6128DEF3070065FDD5 /* LoginViewController.swift in Sources */,
+				95AEB69228FD308700DA998E /* CommentListViewModel.swift in Sources */,
 				9512207E28F4121B0022DB6D /* MainTabViewController.swift in Sources */,
 				959FCB2C28EEA54D00B15130 /* PostMusicViewModel.swift in Sources */,
 				95B5F8D828EFE5F600F0C0E2 /* PostTableViewDataSource.swift in Sources */,

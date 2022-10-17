@@ -9,24 +9,16 @@ import UIKit
 
 class CommentListViewController: UIViewController {
 
-    var tag = Int() // 
+    var tag = Int() // PostsのドキュメントIDにアクセスするためのtag
+    var selectedPost: Post?
 
+    // MARK: - UI Parts
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var commentTextField: UITextField!
+    @IBOutlet private weak var sendButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
