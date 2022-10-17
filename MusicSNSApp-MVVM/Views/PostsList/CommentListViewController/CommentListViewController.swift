@@ -12,7 +12,7 @@ import PKHUD
 
 class CommentListViewController: UIViewController {
 
-    var tag = Int() // PostsのドキュメントIDにアクセスするためのtag
+    var docId = String() // PostsのドキュメントIDにアクセスするためのtag
     var selectedPost: Post?
 
     // MARK: - UI Parts
@@ -23,7 +23,7 @@ class CommentListViewController: UIViewController {
     private let disposeBag = DisposeBag()
 
     // MARK: - ViewModel Connect
-    private lazy var commentListViewModel = CommentListViewModel(commentTextFieldObservable: commentTextField.rx.text.map{$0 ?? ""}.asObservable(), sendButtonObservable: sendButton.rx.tap.asObservable(), selectedTag: tag)
+    private lazy var commentListViewModel = CommentListViewModel(commentTextFieldObservable: commentTextField.rx.text.map{$0 ?? ""}.asObservable(), sendButtonObservable: sendButton.rx.tap.asObservable(), docId: docId)
 
     override func viewDidLoad() {
         super.viewDidLoad()

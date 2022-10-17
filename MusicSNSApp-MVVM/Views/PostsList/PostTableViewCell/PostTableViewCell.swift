@@ -55,9 +55,9 @@ class PostTableViewCell: UITableViewCell {
             self.postListViewModel.tagNumber = self.commentButton.tag
         }).disposed(by: disposeBag)
 
-        postListViewModel.outputs.commentButtonTapPublishSubject.subscribe (onNext: { [weak self] tagNumber in
+        postListViewModel.outputs.commentButtonTapPublishSubject.subscribe (onNext: { [weak self] docId in
             // MARK: - PostListViewControllerにイベント通知
-            NotificationCenter.default.post(name: .getTag, object: nil,userInfo: ["tag": tagNumber])
+            NotificationCenter.default.post(name: .getDocId, object: nil,userInfo: ["docId": docId])
         }).disposed(by: disposeBag)
 
         // LikeButton押されたらLikeButtonのImageを変更する

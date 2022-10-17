@@ -31,7 +31,7 @@ class PostsListViewController: UIViewController {
     }
 
     private func setupNotificationCenter() {
-        NotificationCenter.default.addObserver(self, selector: #selector(didTapCommentButton), name: .getTag, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(didTapCommentButton), name: .getDocId, object: nil)
     }
 
     // MARK: - setupTableView
@@ -48,10 +48,10 @@ class PostsListViewController: UIViewController {
 
     // コメントボタンをタップすると画面遷移
     @objc private func didTapCommentButton(notification: Notification) {
-        guard let tag = notification.userInfo?["tag"] as? Int else { return }
+        guard let docId = notification.userInfo?["docId"] as? String else { return }
         // commentListViewControllerへ画面遷移
         let commentListViewController = CommentListViewController()
-        commentListViewController.tag = tag
+        commentListViewController.docId = docId
         self.navigationController?.pushViewController(commentListViewController, animated: true)
     }
 }

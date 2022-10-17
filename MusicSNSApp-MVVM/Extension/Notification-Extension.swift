@@ -8,5 +8,5 @@
 import Foundation
 
 extension Notification.Name {
-    static let getTag = Notification.Name("getTag")
+    static let getDocId = Notification.Name("getDocId")
 }

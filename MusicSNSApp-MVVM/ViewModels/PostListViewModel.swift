@@ -22,7 +22,7 @@ protocol PostListViewModelInputs {
 protocol PostListViewModelOutputs {
     var fetchPostPublishSubject: PublishSubject<[Post]> { get }
     var likeFlagBehaviorRelay: BehaviorRelay<Bool> { get }
-    var commentButtonTapPublishSubject: PublishSubject<Int> { get }
+    var commentButtonTapPublishSubject: PublishSubject<String> { get }
 }
 
 // MARK: - Type
@@ -42,7 +42,7 @@ class PostListViewModel: PostListViewModelOutputs, PostListViewModelInputs {
     // MARK: - Outputs
     var fetchPostPublishSubject =  RxSwift.PublishSubject<[Post]>()
     var likeFlagBehaviorRelay = RxRelay.BehaviorRelay<Bool>(value: false)
-    var commentButtonTapPublishSubject = RxSwift.PublishSubject<Int>()
+    var commentButtonTapPublishSubject = RxSwift.PublishSubject<String>()
 
     // MARK: - Model Connect
     private let registerPost = RegisterPost()
@@ -103,8 +103,8 @@ class PostListViewModel: PostListViewModelOutputs, PostListViewModelInputs {
         commentButtonTapObservable?.subscribe(onNext: {
             print("コメントボタンがタップされました")
             guard let tagNumber = self.tagNumber else { return }
-            print("tagNumber",tagNumber)
-            self.commentButtonTapPublishSubject.onNext(tagNumber)
+            guard let docId = self.posts[tagNumber].docId else { return }
+            self.commentButtonTapPublishSubject.onNext(docId)
         }).disposed(by: disposeBag)
     }
 }

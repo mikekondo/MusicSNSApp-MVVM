@@ -29,18 +29,19 @@ class CommentListViewModel: CommentListViewModelInputs, CommentListViewModelOutp
     // MARK: - Inputs
     var commentTextFieldObservable: RxSwift.Observable<String>
     var sendButtonObservable: RxSwift.Observable<Void>
-    var selectedTag: Int
+    var docId: String
 
     // MARK: - Outputs
     var postCommentPublishSubject = PublishSubject<postResult>()
 
     private var comment = ""
     private var disposeBag = DisposeBag()
+    let registerComment = RegisterComment()
 
-    init(commentTextFieldObservable: Observable<String>,sendButtonObservable: Observable<Void>,selectedTag: Int) {
+    init(commentTextFieldObservable: Observable<String>,sendButtonObservable: Observable<Void>,docId: String) {
         self.commentTextFieldObservable = commentTextFieldObservable
         self.sendButtonObservable = sendButtonObservable
-        self.selectedTag = selectedTag
+        self.docId = docId
         setupBindings()
     }
 
@@ -59,6 +60,15 @@ class CommentListViewModel: CommentListViewModelInputs, CommentListViewModelOutp
                 return
             }
             // Firestoreにコメントを送信
+            Task{
+                do{
+                    try await self.registerComment.setCommentToFirestore(docId: self.docId, comment: self.comment)
+                    self.postCommentPublishSubject.onNext(postResult.success)
+                }catch {
+                    self.postCommentPublishSubject.onNext(postResult.failure)
+                }
+            }
+
         }).disposed(by: disposeBag)
     }
 }
