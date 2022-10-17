@@ -32,5 +32,4 @@ final class PostTableViewDataSource: NSObject, UITableViewDataSource, RxTableVie
         }
         .on(observedEvent)
     }
-    
 }

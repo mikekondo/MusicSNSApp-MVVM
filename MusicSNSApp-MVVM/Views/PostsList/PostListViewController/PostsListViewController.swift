@@ -10,21 +10,26 @@ import RxSwift
 import RxCocoa
 
 class PostsListViewController: UIViewController {
-
-    @IBOutlet weak var dummyButton: UIButton!
     // MARK: - UI Parts
     @IBOutlet weak var tableView: UITableView!
 
-//    private lazy var postListViewModel = PostListViewModel(dummyButtonTapObservable: dummyButton.rx.tap.asObservable())
-
+    // MARK: - View Model Connect
     private lazy var postListViewModel = PostListViewModel()
+
     private let disposeBag = DisposeBag()
+
+    var postTableViewDataSource = PostTableViewDataSource()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupBindings()
         setupTableView()
+        setupNotificationCenter()
         navigationItem.title = "PostList"
+    }
+
+    private func setupNotificationCenter() {
+        NotificationCenter.default.addObserver(self, selector: #selector(didTapCommentButton), name: .getTag, object: nil)
     }
 
     // MARK: - setupTableView
@@ -37,11 +42,14 @@ class PostsListViewController: UIViewController {
     private func setupBindings() {
         postListViewModel.outputs.fetchPostPublishSubject.bind(to: tableView.rx.items(dataSource: PostTableViewDataSource()))
             .disposed(by: disposeBag)
+    }
 
-        postListViewModel.outputs.commentButtonTapPublishSubject.subscribe (onNext: { [weak self] tagNumber in
-            print("タグ受け取り",tagNumber)
-            let commentListViewController = CommentListViewController()
-            self?.navigationController?.pushViewController(commentListViewController, animated: true)
-        }).disposed(by: disposeBag)
+    // コメントボタンをタップすると画面遷移
+    @objc private func didTapCommentButton(notification: Notification) {
+        guard let tag = notification.userInfo?["tag"] as? Int else { return }
+        // commentListViewControllerへ画面遷移
+        let commentListViewController = CommentListViewController()
+        commentListViewController.tag = tag
+        self.navigationController?.pushViewController(commentListViewController, animated: true)
     }
 }

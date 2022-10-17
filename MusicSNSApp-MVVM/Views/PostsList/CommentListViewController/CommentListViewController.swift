@@ -9,6 +9,9 @@ import UIKit
 
 class CommentListViewController: UIViewController {
 
+    var tag = Int() // 
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

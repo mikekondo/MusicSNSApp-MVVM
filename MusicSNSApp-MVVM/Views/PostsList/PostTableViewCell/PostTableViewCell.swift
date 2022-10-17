@@ -11,6 +11,10 @@ import RxCocoa
 import FirebaseAuth
 import SDWebImage
 
+protocol PostTableViewCellDelegate {
+    func tapCommentButton(tag: Int)
+}
+
 class PostTableViewCell: UITableViewCell {
     // MARK: - UI Parts
     @IBOutlet private weak var userImageView: UIImageView!
@@ -29,7 +33,9 @@ class PostTableViewCell: UITableViewCell {
     let heartFill = UIImage(systemName: "heart.fill")
     let heart = UIImage(systemName: "heart")
 
+    // MARK: - View Model Connect
     private lazy var postListViewModel = PostListViewModel(likeButtonTapObservable: likeButton.rx.tap.asObservable(), commentButtonTapObservable: commentButton.rx.tap.asObservable())
+
     private let disposeBag = DisposeBag()
 
     override func awakeFromNib() {
@@ -47,6 +53,12 @@ class PostTableViewCell: UITableViewCell {
         // CommentButtonのタグをViewModelのtagに設定
         commentButton.rx.tap.subscribe (onNext: {
             self.postListViewModel.tagNumber = self.commentButton.tag
+        }).disposed(by: disposeBag)
+
+        postListViewModel.outputs.commentButtonTapPublishSubject.subscribe (onNext: { [weak self] tagNumber in
+            print("タグ受け取り",tagNumber)
+            // MARK: - PostListViewControllerにイベント通知
+            NotificationCenter.default.post(name: .getTag, object: nil,userInfo: ["tag": tagNumber])
         }).disposed(by: disposeBag)
 
         // LikeButton押されたらLikeButtonのImageを変更する
@@ -83,5 +95,4 @@ class PostTableViewCell: UITableViewCell {
             likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
         }
     }
-    
 }

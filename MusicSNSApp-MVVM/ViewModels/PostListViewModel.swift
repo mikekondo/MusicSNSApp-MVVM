@@ -50,7 +50,6 @@ class PostListViewModel: PostListViewModelOutputs, PostListViewModelInputs {
 
     private let disposeBag = DisposeBag()
 
-    // TODO: 起動時に最新データを反映させる
     private var likeFlag = false
 
     private var posts = [Post]()
@@ -61,6 +60,7 @@ class PostListViewModel: PostListViewModelOutputs, PostListViewModelInputs {
         setupBindings()
     }
 
+    // MARK: PostTableViewCell用のInitializer
     init(){
         setupBindings()
     }
@@ -72,8 +72,8 @@ class PostListViewModel: PostListViewModelOutputs, PostListViewModelInputs {
         setupBindings()
     }
 
+    // MARK: setupBindings
     private func setupBindings() {
-
         loadPost.fetchPostsFromFirestore { posts, error in
             if let error = error {
                 self.fetchPostPublishSubject.onError(error)
@@ -105,12 +105,6 @@ class PostListViewModel: PostListViewModelOutputs, PostListViewModelInputs {
             guard let tagNumber = self.tagNumber else { return }
             print("tagNumber",tagNumber)
             self.commentButtonTapPublishSubject.onNext(tagNumber)
-            print("onNext")
-        }).disposed(by: disposeBag)
-
-        dummyButtonTapObservable?.subscribe(onNext: {
-            print("dummyButtonOn")
-            self.commentButtonTapPublishSubject.onNext(1)
         }).disposed(by: disposeBag)
     }
 }
