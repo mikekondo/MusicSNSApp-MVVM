@@ -1,6 +1,9 @@
 ## MusicSNSApp-MVVM
 楽曲写真とコメントを投稿し好きな音楽を共有するSNSアプリ（Insta風）
 
+## デモ　（完成途中）
+
+
 ## 使用技術・ライブラリ
 - SwiftPackageManeger
 - CocoaPods（RxSwiftのみ）
