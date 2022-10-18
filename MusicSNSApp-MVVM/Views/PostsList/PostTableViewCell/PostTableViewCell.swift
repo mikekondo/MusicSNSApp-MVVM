@@ -11,6 +11,10 @@ import RxCocoa
 import FirebaseAuth
 import SDWebImage
 
+protocol PostTableViewCellDelegate {
+    func tapCommentButton(tag: Int)
+}
+
 class PostTableViewCell: UITableViewCell {
     // MARK: - UI Parts
     @IBOutlet private weak var userImageView: UIImageView!
@@ -29,7 +33,9 @@ class PostTableViewCell: UITableViewCell {
     let heartFill = UIImage(systemName: "heart.fill")
     let heart = UIImage(systemName: "heart")
 
-    private lazy var postListViewModel = PostListViewModel(likeButtonTapObservable: likeButton.rx.tap.asObservable())
+    // MARK: - View Model Connect
+    private lazy var postListViewModel = PostListViewModel(likeButtonTapObservable: likeButton.rx.tap.asObservable(), commentButtonTapObservable: commentButton.rx.tap.asObservable())
+
     private let disposeBag = DisposeBag()
 
     override func awakeFromNib() {
@@ -37,24 +43,31 @@ class PostTableViewCell: UITableViewCell {
         setupBindings()
     }
 
+    // MARK: - setupBindings
     private func setupBindings() {
-        // likeButtonのタグをViewModelのtag
+        // likeButtonのタグをViewModelのtagに設定
         likeButton.rx.tap.subscribe (onNext: {
             self.postListViewModel.tagNumber = self.likeButton.tag
         }).disposed(by: disposeBag)
 
-        // TODO: LikeButton押されたらLikeButtonのImageを変更する
-        postListViewModel.outputs.likeFlagBehaviorRelay.subscribe (onNext: { likeFlag in
+        // CommentButtonのタグをViewModelのtagに設定
+        commentButton.rx.tap.subscribe (onNext: {
+            self.postListViewModel.tagNumber = self.commentButton.tag
+        }).disposed(by: disposeBag)
+
+        postListViewModel.outputs.commentButtonTapPublishSubject.subscribe (onNext: { [weak self] docId in
+            // MARK: - PostListViewControllerにイベント通知
+            NotificationCenter.default.post(name: .getDocId, object: nil,userInfo: ["docId": docId])
+        }).disposed(by: disposeBag)
+
+        // LikeButton押されたらLikeButtonのImageを変更する
+        postListViewModel.outputs.likeFlagBehaviorRelay.subscribe(onNext: { likeFlag in
             if likeFlag == true {
                 self.likeButton.setImage(self.heartFill, for: .normal)
             }else{
                 self.likeButton.setImage(self.heart, for: .normal)
             }
         })
-
-        commentButton.rx.tap.subscribe (onNext: {
-            // TODO: コメント画面に遷移
-        }).disposed(by: disposeBag)
     }
 
     func configure(post: Post,index: Int) {
@@ -64,6 +77,7 @@ class PostTableViewCell: UITableViewCell {
         commentTextView.text = post.postComment
         postImageView.sd_setImage(with: URL(string: post.artworkUrl))
         userNameLabel.text = post.userName
+        // タグの設定
         likeButton.tag = index
         commentButton.tag = index
         userImageView.image = UIImage(named: "gohan")
@@ -80,5 +94,4 @@ class PostTableViewCell: UITableViewCell {
             likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
         }
     }
-    
 }

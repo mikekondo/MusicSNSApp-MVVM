@@ -45,6 +45,7 @@ class SearchMusicViewModel: SearchMusicViewModelInputs, SearchMusicViewModelOutp
         setupBindings()
     }
 
+    // MARK: setupBindings
     private func setupBindings() {
         searchBarObservable.subscribe(onNext: { text in
             guard let url = URL(string: "https://itunes.apple.com/search?term=\(text)&entity=song&contry=jp") else { return }
