@@ -2,7 +2,8 @@
 楽曲写真とコメントを投稿し好きな音楽を共有するSNSアプリ（Insta風）
 
 ## デモ（途中経過）
-https://user-images.githubusercontent.com/65348333/196368101-7a8c4108-ead7-4c3d-93ed-ee6ee807b809.gif
+![デモ](https://user-images.githubusercontent.com/65348333/196368420-2689e6d8-1b17-4a97-901e-9fcfe9851c0b.gif)
+
 
 
 ## 使用技術・ライブラリ
