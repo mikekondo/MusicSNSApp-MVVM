@@ -16,6 +16,7 @@ protocol CommentListViewModelInputs {
 
 protocol CommentListViewModelOutputs {
     var postCommentPublishSubject: PublishSubject<postResult> { get }
+    var fetchCommentsPublishSubject: PublishSubject<[Comment]> { get }
 }
 
 // MARK: - Type
@@ -25,7 +26,6 @@ protocol CommentListViewModelType {
 }
 
 class CommentListViewModel: CommentListViewModelInputs, CommentListViewModelOutputs {
-
     // MARK: - Inputs
     var commentTextFieldObservable: RxSwift.Observable<String>
     var sendButtonObservable: RxSwift.Observable<Void>
@@ -33,8 +33,10 @@ class CommentListViewModel: CommentListViewModelInputs, CommentListViewModelOutp
 
     // MARK: - Outputs
     var postCommentPublishSubject = PublishSubject<postResult>()
+    var fetchCommentsPublishSubject = RxSwift.PublishSubject<[Comment]>()
 
     private var comment = ""
+    private var comments = [Comment]()
     private var loadComment = LoadComment()
     private var disposeBag = DisposeBag()
     let registerComment = RegisterComment()
@@ -48,7 +50,14 @@ class CommentListViewModel: CommentListViewModelInputs, CommentListViewModelOutp
 
 
     private func setupBindings() {
-        
+        loadComment.fetchCommentsFromFirestore(docId: self.docId) { comments, error in
+            if let error = error {
+                print("error",error)
+            }
+            guard let comments = comments else { return }
+            self.comments = comments
+            self.fetchCommentsPublishSubject.onNext(comments)
+        }
 
         commentTextFieldObservable.subscribe { comment in
             print("comment",comment)

@@ -28,10 +28,17 @@ class CommentListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupBindings()
+        setupTableView()
+    }
+
+    // MARK: - setupTableView
+    private func setupTableView() {
+        tableView.rowHeight = 80
+        tableView.register(UINib(nibName: CommentTableViewCell.nibName, bundle: nil), forCellReuseIdentifier: CommentTableViewCell.identifier)
     }
 
     private func setupBindings() {
-        // TODO: Firestoreからコメントデータをロードする
+        commentListViewModel.outputs.fetchCommentsPublishSubject.bind(to: tableView.rx.items(dataSource: CommentTableViewDataSource())).disposed(by: disposeBag)
 
         commentListViewModel.postCommentPublishSubject.subscribe (onNext: { result in
             switch result {
