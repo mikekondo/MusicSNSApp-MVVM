@@ -13,6 +13,8 @@ struct Comment {
     let comment: String
     let createdAt: Timestamp
 
+    var docId: String?
+
     init(dic: [String: Any]) {
         self.userName = dic["userName"] as? String ?? ""
         self.comment = dic["comment"] as? String ?? ""
