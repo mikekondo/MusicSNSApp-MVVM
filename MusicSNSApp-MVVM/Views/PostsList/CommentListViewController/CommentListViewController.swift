@@ -31,6 +31,8 @@ class CommentListViewController: UIViewController {
     }
 
     private func setupBindings() {
+        // TODO: Firestoreからコメントデータをロードする
+
         commentListViewModel.postCommentPublishSubject.subscribe (onNext: { result in
             switch result {
             case .success:

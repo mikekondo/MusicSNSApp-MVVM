@@ -35,6 +35,7 @@ class CommentListViewModel: CommentListViewModelInputs, CommentListViewModelOutp
     var postCommentPublishSubject = PublishSubject<postResult>()
 
     private var comment = ""
+    private var loadComment = LoadComment()
     private var disposeBag = DisposeBag()
     let registerComment = RegisterComment()
 
@@ -47,6 +48,8 @@ class CommentListViewModel: CommentListViewModelInputs, CommentListViewModelOutp
 
 
     private func setupBindings() {
+        
+
         commentTextFieldObservable.subscribe { comment in
             print("comment",comment)
             self.comment = comment
